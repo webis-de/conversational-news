@@ -1,0 +1,1039 @@
+worker,task,utterance,matching_templates,plausible_operations,type_of_sentence
+W181,2,News articles about COVID-19,TNAU523,Create(l1),command
+W181,4,Or treatment,TNAU626,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) v l3)",command
+W181,5,articles without vaccination or treatment,TNAU1113,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W181,6,NCD or NI or WHO in the headline,TNAU695,Create(l4 v l5 v l6),command
+W181,7,Without 'North Ireland',TNAU756,"Update(l5, ?),Update(l5, neg(l5))",command
+W181,8,National Insurance,TNAU818,"Update(?, l7)",command
+W181,9,SARS-COV-2 but not COVID-19,TNAU865,"Update(l1, l8)",command
+W181,12,New search for flu,TNAU1002,"Update(l8 ^ l9, l10)",command
+W181,13,without COVID-19,TNAU1058,Create(neg(l1)),command
+W182,2,Latest news on COVID-19,TNAU523,Create(l1),command
+W182,3,Show more details about its vaccination,TNAU570,Create(l2),command
+W182,5,Show articles not related to vaccination or treatment,TNAU1115,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W182,6,"Show me articles which have NCD, NI or WHO in the headline",TNAU696,Create(l4 v l5 v l6),command
+W182,7,NI is not North Ireland - update search for articles with NI in headline,TNAU747,"Update(l5, ?)",statement
+W182,8,NI means National Insurance,TNAU814,"Update(?, l7)",statement
+W182,9,Show new articles about SARS-CoV-2 instead of COVID-19,TNAU864,"Update(l1, l8)",command
+W182,11,Show new articles related to the economy instead of those related to the headline,TNAU971,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W182,12,Show new articles about the flu,TNAU999,"Update(l8 ^ l9, l10),Create(l10)",command
+W182,13,Filter and show articles which are not related to COVID-19,TNAU1063,Create(neg(l1)),command
+W183,2,I want all the news items about COVID-19,TNAU528,Create(l1),statement
+W183,3,I want the ones that talk about vaccination,TNAU563,Create(l2),statement
+W183,4,Also include any articles about treatment,TNAU618,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W183,5,show the articles that were not about vaccination or treatment,TNAU1115,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W183,6,"great can you refine that to articles with NCD, NI or WHO in the headline?",TNAU698,Create(l4 v l5 v l6),question
+W183,7,NI does not stand for North Ireland,TNAU744,"Update(l5, ?)",statement
+W183,8,NI in this case i mean National Insurance,TNAU816,"Update(?, l7)",statement
+W183,9,okay new search articles on SARS-CoV-2 instead of COVID-19 with the same terms in the headline,TNAU872,"Update(l1, l8)",command
+W183,10,what did I just ask to search for?,TNAU927,Read(Q10),question
+W183,11,okay can you refine to articles about the economy instead of by headline,TNAU966,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W183,12,"Clear my last search, I am after articles about the flu",TNAU997,"Update(l8 ^ l9, l10)",statement
+W183,13,take out any about COVID-19,TNAU1058,Create(neg(l1)),command
+W184,2,show recent news about COVID-19,TNAU525,Create(l1),command
+W184,4,show more news about treatment of coronavirus,TNAU631,"Update(l2, l2 v l3),Update(l1 ^ l2, l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W184,5,show more news about coronavirus that aren't about vaccination or treatment,TNAU1115,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W184,6,"show only the articles that have NCD, NI, or WHO in the headline",TNAU696,Create(l4 v l5 v l6),command
+W184,7,where NI doesn't stand for North Ireland,TNAU744,"Update(l5, ?)",command
+W184,8,NI stands for National Insurance,TNAU814,"Update(?, l7)",statement
+W184,9,same query but for SARS-COV-2 and not for COVID-19,TNAU875,"Update(l1, l8)",command
+W184,10,repeat previous query,TNAU922,Read(Q10),command
+W184,11,"like previous query but should be focussed on economy and not NCD, NI or WHO in the headline",TNAU1148,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W184,12,ignore previous queries and show news articles about flu,TNAU998,"Update(l8 ^ l9, l10)",command
+W184,13,exclude articles about COVID-19,TNAU1058,Create(neg(l1)),command
+W185,2,show me news articles on COVID-19,TNAU525,Create(l1),command
+W185,3,show me articles that mention vaccination,TNAU559,"Create(l2),Update(l1, l2),Update(l1, l1 v l2)",command
+W185,4,show me articles that discuss a treatment for the virus,TNAU629,"Update(l1 ^ l2, l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",command
+W185,6,"Show me articles that mention WHO, NI or NCD in the headline",TNAU696,Create(l4 v l5 v l6),command
+W185,7,"Remove articles that refer to North Ireland, this is not the correct NI",TNAU754,"Update(l5, ?)",command
+W185,8,I want to see articles that refer to National Insurance,TNAU820,"Update(?, l7)",statement
+W185,9,"No articles on COVID-19, show me articles on SARS-CoV-2",TNAU871,"Update(l1, l8)",command
+W185,12,now show me news articles about the flu,TNAU1005,"Update(l8 ^ l9, l10),Create(l10)",command
+W185,13,change the list so that it doesn't include articles about COVID-19,TNAU1061,Create(neg(l1)),command
+W186,2,What's the latest news on COVID-19?,TNAU523,Create(l1),question
+W186,3,Show me the ones about vaccination,TNAU569,Create(l2),command
+W186,4,also show me more articles about treatment,TNAU619,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W186,5,go back to original search and exclude results about treatment and vaccination,TNAU1114,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W186,6,"show me articles that include NCD, NI or WHO in the headline",TNAU696,Create(l4 v l5 v l6),command
+W186,7,NI does not mean North Ireland,TNAU744,"Update(l5, ?)",statement
+W186,8,NI means National Insurance,TNAU814,"Update(?, l7)",statement
+W186,9,replace COVID-19 with SARS-CoV-2 in the previous headline search,TNAU874,"Update(l1, l8)",command
+W186,10,advice previous search criteria,TNAU925,Read(Q10),command
+W186,11,repeat last search with headline criteria removed and include articles that mention the economy,TNAU970,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W186,12,now show me articles about the flu,TNAU1005,"Update(l8 ^ l9, l10),Create(l10)",command
+W186,13,repeat previous search and remove articles that mention COVID-19,TNAU1066,Create(neg(l1)),command
+W187,2,give me a list of news articles on COVID-19,TNAU527,Create(l1),command
+W187,3,give me a list of news articles about a vaccination for the disease,TNAU559,"Create(l2),Update(l1, l2),Update(l1, l1 v l2)",command
+W187,4,give me a list of treatment options,TNAU622,"Update(l1 ^ l2, l3),Update(l1 ^ l2, (l1 ^ l2) v l3)",command
+W187,5,give me a list of articles that are not about the vaccination or treatment ,TNAU1115,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W187,6,"give me a list of articles which references NCD, NI, WHO in the headline",TNAU696,Create(l4 v l5 v l6),command
+W187,7,"remove from the list of articles all that reference ""North Ireland""",TNAU755,"Update(l5, ?),Update(l5, neg(l5))",command
+W187,8,give me a list of articles which references National Insurance in the headline,TNAU813,"Update(?, l7)",command
+W187,9,give me a list of articles that are about SARS-CoV-2 instead of COVID-19 from the results previously found,TNAU869,"Update(l1, l8)",command
+W187,11,"give me a list of articles that are about the economy which instead of a headline that contains at least one of NCD, NI or WHO",TNAU1146,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W187,12,remove all previous articles found and give me a list of articles that are about the flu,TNAU998,"Update(l8 ^ l9, l10)",command
+W187,13,give me a list of articles from the articles previously found that do no contain any information about COVID-19,TNAU1059,Create(neg(l1)),command
+W188,2,COVID-19 news,TNAU524,Create(l1),command
+W188,3,about vaccination,TNAU561,Create(l2),command
+W188,6,about NCD or NI or WHO im headline,TNAU695,Create(l4 v l5 v l6),command
+W188,7,not north ireland,TNAU743,"Update(l5, ?),Update(l5, neg(l5))",command
+W188,8,I meant National Insurance,TNAU819,"Update(?, l7)",statement
+W188,9,SARS-CoV-2 news instead of COVID-19,TNAU865,"Update(l1, l8)",command
+W188,10,What did i say?,TNAU927,Read(Q10),question
+W188,12,articles about flu instead,TNAU1001,"Update(l8 ^ l9, l10)",command
+W188,13,articles not about COVID-19,TNAU1060,Create(neg(l1)),command
+W189,2,Show me news on COVID-19.,TNAU525,Create(l1),command
+W189,3,Show me only the ones on vaccination.,TNAU569,Create(l2),command
+W189,4,Show also the articles on treatment.,TNAU630,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",command
+W189,5,Show more articles other than ones about vaccination and treatments.,TNAU677,Delete(l2 v l3),command
+W189,6,"Show me me only the articles that contain NCD, NI or WHO in the headline.",TNAU696,Create(l4 v l5 v l6),command
+W189,7,"By NI, I didn't mean North Ireland.",TNAU748,"Update(l5, ?)",statement
+W189,8,I was referring to National Insurance (NI).,TNAU819,"Update(?, l7)",statement
+W189,9,Can you bring up articles for SARS-CoV-2 (not COVID-19) ,TNAU867,"Update(l1, l8)",question
+W189,10,What was my last query?,TNAU928,Read(Q10),question
+W189,11,Now show me articles relating to the economy rather than the previous request regarding headlines.,TNAU968,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W189,12,Let's start from scratch. I want to read about the flu.,TNAU997,"Update(l8 ^ l9, l10)",statement
+W189,13,Don't show any articles about COVID-19.,TNAU1062,Create(neg(l1)),command
+W190,2,COVID-19 news articles,TNAU524,Create(l1),command
+W190,3,vaccination articles,TNAU560,"Create(l2),Update(l1, l2),Update(l1, l1 v l2)",command
+W190,4,vaccination or treatment articles,TNAU617,"Update(l2, l2 v l3)",command
+W190,5,articles not about vaccination or treatment,TNAU1113,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W190,6,"articles with headlines including NCD, NI, WHO",TNAU697,Create(l4 v l5 v l6),command
+W190,7,NI instead of North Ireland,TNAU746,"Update(l5, ?),Update(l5, neg(l5))",command
+W190,8,NI is equal to National Insurance,TNAU817,"Update(?, l7)",statement
+W190,9,SARS-CoV-2 not COVID-19 plus previous headlines,TNAU866,"Update(l1, l8)",command
+W190,10,show past inputs,TNAU925,Read(Q10),command
+W190,12,flu articles,TNAU1000,"Create(l10),Update(l8 ^ l9, l10)",command
+W190,13,not COVID-19 related,TNAU1064,Create(neg(l1)),command
+W191,2,Show me the latest news about COVID-19.,TNAU525,Create(l1),command
+W191,3,Show me news related to vaccination,TNAU559,"Create(l2),Update(l1, l2),Update(l1, l1 v l2)",command
+W191,4,Show me treatments,TNAU631,"Update(l2, l2 v l3),Update(l1 ^ l2, l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W191,5,Show me all articles exept vaccination or treatment,TNAU1115,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W191,6,"Show me articles with NCD, NI or WHO in the headline",TNAU696,Create(l4 v l5 v l6),command
+W191,7,Do not use NI as North Ireland,TNAU749,"Update(l5, ?)",command
+W191,8,National Insurance,TNAU818,"Update(?, l7)",command
+W191,9,Change COVID-19 to Sars-CoV-2,TNAU868,"Update(l1, l8)",command
+W191,12,Show me articles about the flu,TNAU999,"Update(l8 ^ l9, l10),Create(l10)",command
+W191,13,exclude COVID-19,TNAU1058,Create(neg(l1)),command
+W192,2,Show me articles about COVID-19.,TNAU525,Create(l1),command
+W192,3,Show me articles about vaccination.,TNAU559,"Create(l2),Update(l1, l2),Update(l1, l1 v l2)",command
+W192,5,Show me articles that are not related to vaccination or treatment.,TNAU1115,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W192,6,"Show me articles with the headline related to the NCD, NI or WHO.",TNAU704,Create(l4 v l5 v l6),command
+W192,7,North Ireland is not correct.,TNAU745,"Update(l5, ?)",statement
+W192,8,I meant National Insurance.,TNAU819,"Update(?, l7)",statement
+W192,9,"Show me articles on SARS-CoV-2, not COVID-19 with these headlines.",TNAU877,"Update(l1, l8)",command
+W192,10,What was my last request?,TNAU928,Read(Q10),question
+W192,11,"Show me articles about the economy and doesn't need a headline of NCD, NI or WHO.",TNAU1151,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W192,12,Show us articles on the flu.,TNAU999,"Update(l8 ^ l9, l10),Create(l10)",command
+W192,13,Take away articles on COVID-19.,TNAU1058,Create(neg(l1)),command
+W193,2,I'd like news articles on COVID-19,TNAU528,Create(l1),statement
+W193,3,Just show my vaccination articles,TNAU564,"Update(l1, l2),Create(l2)",command
+W193,4,I also want to see treatments,TNAU623,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",statement
+W193,5,Show me other news articles not about vaccination or treatment,TNAU1115,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W193,6,"Include only NCD, NI or WHO headlines",TNAU700,Create(l4 v l5 v l6),command
+W193,7,NI is not North Ireland,TNAU747,"Update(l5, ?)",statement
+W193,8,I meant National Insurance,TNAU819,"Update(?, l7)",statement
+W193,10,Repeat last search,TNAU922,Read(Q10),command
+W193,12,Show me about flu,TNAU999,"Update(l8 ^ l9, l10),Create(l10)",command
+W193,13,Show me only news not including COVID-19,TNAU1067,Create(neg(l1)),command
+W194,2,What is COVID-19?,TNAU530,Create(l1),question
+W194,7,I’m not asking for North Ireland.,TNAU750,"Update(l5, ?)",statement
+W194,8,I meant National Insurance.,TNAU819,"Update(?, l7)",statement
+W194,9,What are the news about SARS-Cov-2 and not COVID-19,TNAU879,"Update(l1, l8)",question
+W194,10,Please repeat previous message,TNAU922,Read(Q10),command
+W194,12,What are news about flu,TNAU1006,"Update(l8 ^ l9, l10),Create(l10)",question
+W194,13,Disregard news about COVID-19,TNAU1058,Create(neg(l1)),command
+W195,2,list of articles of COVID-19,TNAU529,Create(l1),command
+W195,3,list of articles about corona vaccination.,TNAU565,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W195,4,list of articles on treatment,TNAU624,"Update(l1 ^ l2, l3),Update(l1 ^ l2, (l1 ^ l2) v l3)",command
+W195,6,"list of articles on WHO,NCD,NI   in the headline",TNAU701,Create(l4 v l5 v l6),command
+W195,7,It's not North Ireland,TNAU743,"Update(l5, ?),Update(l5, neg(l5))",statement
+W195,8,I meant to say it's National Insurance.,TNAU819,"Update(?, l7)",statement
+W195,10,Tell about theinformation  i have given to you before recent information,TNAU926,Read(Q10),command
+W195,11,i want you to tell me about the economy instead of headline.,TNAU967,"Update(f1:(l4 ^ l7 ^ l6), l9)",statement
+W195,12,list articles about flu,TNAU999,"Update(l8 ^ l9, l10),Create(l10)",command
+W195,13,list articles which do not contain COVID-19 information.,TNAU1059,Create(neg(l1)),command
+W196,2,list covid-19 articles,TNAU524,Create(l1),command
+W196,4,and treatment,TNAU620,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 ^ l3)",command
+W196,6,NCD or NI or WHO in headline,TNAU695,Create(l4 v l5 v l6),command
+W196,7,without North Ireland,TNAU756,"Update(l5, ?),Update(l5, neg(l5))",command
+W196,8,NI and National Insurance,TNAU815,"Update(?, l7)",command
+W196,9,SARS-CoV-2 articles . Not COVID-19.,TNAU865,"Update(l1, l8)",command
+W196,10,repeat last query,TNAU922,Read(Q10),command
+W196,11,headline about economy. Not NCD or NI or WHO,TNAU1147,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W196,12,articles for flu,TNAU999,"Update(l8 ^ l9, l10),Create(l10)",command
+W196,13,without COVID-19,TNAU1058,Create(neg(l1)),command
+W197,2,Please get me news articles on the COVID-19,TNAU525,Create(l1),command
+W197,3,Please get me news articles related only to vaccinations,TNAU568,"Update(l1, l2),Create(l2)",command
+W197,4,Please change this list to include treatments too,TNAU627,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",command
+W197,5,Please remove all news articles about vaccinations and treatments,TNAU1114,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W197,6,"Please include all articles that have NCD, NI or WHO in the headline.",TNAU696,Create(l4 v l5 v l6),command
+W197,7,Please remove all articles with North Ireland in the headline,TNAU751,"Update(l5, neg(l5)),Update(l5, ?)",command
+W197,8,"Instead, include all articles with National Insurance in the headline",TNAU813,"Update(?, l7)",command
+W197,9,Please remove all news articles about COVID-19 and instead include all articles about SARS-CoV-2,TNAU873,"Update(l1, l8)",command
+W197,10,What did I tell you to do before?,TNAU927,Read(Q10),question
+W197,11,"Please change the list to include articles about the economy. Remove articles with headlines that include NCD, NI or WHO.",TNAU1149,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W197,12,Now I want to list to include articles about flu.,TNAU1004,"Update(l8 ^ l9, l10),Create(l10)",statement
+W198,2,Show me articles about COVID-19,TNAU525,Create(l1),command
+W198,3,Only show me articles about vaccination,TNAU566,"Create(l2),Update(l1, l2)",command
+W198,4,Also show me articles about treatment,TNAU619,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W198,5,"Show me all of the news articles again, not just the ones about vaccination and treatment",TNAU676,Delete(l2 v l3),command
+W198,6,"Only include articles with NCD, NI or WHO in the headline",TNAU702,Create(l4 v l5 v l6),command
+W198,7,"Please correct results, NI does not refer to North Ireland",TNAU752,"Update(l5, ?)",statement
+W198,8,NI should refer to National Insurance,TNAU814,"Update(?, l7)",statement
+W198,9,Search for articles relating to SARS-CoV-2 instead of COVID-19 with the same headline filters,TNAU876,"Update(l1, l8)",command
+W198,10,remind me of my current search filters,TNAU924,Read(Q10),command
+W198,11,Remove my current headline filters and show me articles relating to the economy instead,TNAU969,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W198,12,"start a new search, I'm looking for articles about the flu",TNAU997,"Update(l8 ^ l9, l10)",statement
+W198,13,remove results related to COVID-19,TNAU1058,Create(neg(l1)),command
+W199,2,can you give me a list of articles on COVID-19?,TNAU526,Create(l1),question
+W199,3,can you show me articles about a vaccination?,TNAU562,"Create(l2),Update(l1, l2),Update(l1, l1 v l2)",question
+W199,4,could you also add treatment articles?,TNAU621,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",question
+W199,5,can you remove the vaccination and treatment filters?,TNAU674,Delete(l2 v l3),question
+W199,6,"filter by the following words in the headline: NCD, NI or WHO",TNAU699,Create(l4 v l5 v l6),command
+W199,7,Please take out results that show North Ireland.,TNAU751,"Update(l5, neg(l5)),Update(l5, ?)",command
+W199,8,Show National Insurance results instead,TNAU821,"Update(?, l7)",command
+W199,9,"using the same filters, look for SARS-CoV-2 articles instead of COVID-19",TNAU878,"Update(l1, l8)",command
+W199,10,show me the current search criteria,TNAU925,Read(Q10),command
+W199,11,"Remove headline criteria, then show me economy related articles",TNAU969,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W199,12,"new search, show me flu articles",TNAU1003,"Update(l8 ^ l9, l10)",command
+W199,13,remove COVID-19 articles,TNAU1065,Create(neg(l1)),command
+W200,2,Please gather all news articles on COVID-19 ,TNAU525,Create(l1),command
+W200,3,Please gather all news articles that are about a vaccination,TNAU567,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W200,4,Please gather all new articles that are about a treatment option that would be an alternative to a vaccination,TNAU628,"Update(l2, l2 v l3)",command
+W200,5,Please gather all news articles that are not about a vaccination or treatment,TNAU675,Delete(l2 v l3),command
+W200,6,"Please gather all news articles that have referenced in the headline NCD, NI or WHO",TNAU703,Create(l4 v l5 v l6),command
+W200,7,Please gather all new articles that do not reference NI or North Ireland in the headline,TNAU753,"Update(l5, neg(l5)),Update(l5, ?)",command
+W200,8,Please gather all news articles that have National Insurance (also known as NI) referenced in the headline.,TNAU813,"Update(?, l7)",command
+W200,9,Please gather all news articles that are about SARS-CoV-2 instead of COVID-19,TNAU864,"Update(l1, l8)",command
+W200,11,"please gather all news articles that are about the economy that do not have NCD, NI or WHO in the headline",TNAU1150,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W200,12,Please disregard all previous instructions and now gather all news articles that are about the flu,TNAU998,"Update(l8 ^ l9, l10)",command
+W200,13,Using the articles previously found please gather a list of news articles that are not about covid-19,TNAU1068,Create(neg(l1)),command
+W201,3,Please filter the articles to ones that contain the word vaccination.,TNCA583,Create(l2),command
+W201,4,"Please also the word ""treatment"" to the filtered articles",TNCA641,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",command
+W201,5,Please remove the word filters vaccination and treatment. ,TNCA680,Delete(l2 v l3),command
+W201,6,"Please filter articles with headline titles that include at least one of the following words: NCD, NI or WHO.",TNCA708,Create(l4 v l5 v l6),command
+W201,7,Please search abbreviation of NI association instead and remove North Ireland,TNCA767,"Update(l5, ?),Update(l5, neg(l5))",command
+W201,9,Please search SARS-CoV-2 instead of COVID-19 ,TNCA880,"Update(l1, l8)",command
+W201,10,Remind me of my search critieria,TNCA932,Read(Q10),command
+W201,11,Please remove my criteria for headlines and search any news articles related to the economy,TNCA978,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W201,12,Please remove previous filter and criteria and search for articles about flu only,TNCA1007,"Update(l8 ^ l9, l10)",command
+W201,13,Please filter articles without COVID-19 in them,TNCA1077,Create(neg(l1)),command
+W202,2,please show me all news articles on COVID-19,TNCA532,Create(l1),command
+W202,4,May I please also see articles about treatment?,TNCA632,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",question
+W202,5,May I please see those news articles that are not about vaccination or treatment?,TNCA1124,"Update(l2 v l3, neg(l2) v neg(l3))",question
+W202,6,"May I please see the articles that have NCD, NI, or WHO in the headline?",TNCA705,Create(l4 v l5 v l6),question
+W202,7,Please remove articles with North Ireland,TNCA757,"Update(l5, neg(l5)),Update(l5, ?)",command
+W202,8,I was looking for National Insurance,TNCA829,"Update(?, l7)",statement
+W202,9,I would like to see news articles about SARS-CoV-2 instead of COVID-19,TNCA887,"Update(l1, l8)",statement
+W202,10,May I please see the search criteria?,TNCA931,Read(Q10),question
+W202,11,"I would like to just see articles about the economy, instead of having a headline containing NCD, NI, or WHO",TNCA975,"Update(f1:(l4 ^ l7 ^ l6), l9)",statement
+W202,12,I want to see news articles about the flu,TNCA1011,"Update(l8 ^ l9, l10),Create(l10)",statement
+W202,13,I want to see news articles that are not about COVID-19,TNCA1075,Create(neg(l1)),statement
+W203,2,Can you retrieve news about COVID-19?,TNCA537,Create(l1),question
+W203,4,Can you get me more news on vaccination or treatment?,TNCA639,"Update(l2, l2 v l3)",question
+W203,5,Can you show me news without vaccination or treatment information?,TNCA1119,"Update(l2 v l3, neg(l2) v neg(l3))",question
+W203,6,"Can you show me news that the headline contains NCD, NI or WHO?",TNCA709,Create(l4 v l5 v l6),question
+W203,7,"NI doesn't stand for North Ireland, please correct that for me",TNCA759,"Update(l5, ?)",statement
+W203,8,NI stands for National Insurance,TNCA823,"Update(?, l7)",statement
+W203,9,"Instead of news about COVID-19, please search news about SARS-CoV-2 ",TNCA889,"Update(l1, l8)",command
+W203,10,What's the current search command that I gave you?,TNCA938,Read(Q10),question
+W203,11,"Instead of the headlines that I've told you, please search the news articles about the economy",TNCA976,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W203,12,Please discard all of the previous command and search news about flu,TNCA1007,"Update(l8 ^ l9, l10)",command
+W203,13,"In your search, please exclude any news related to COVID-19",TNCA1071,Create(neg(l1)),command
+W204,2,Create a list of articles relating to Covid-19.,TNCA531,Create(l1),command
+W204,3,Update list to show articles relating to vaccination.,TNCA585,"Create(l2),Update(l1, l2)",command
+W204,5,Show more articles not related to vaccination or treatment.,TNCA1125,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W204,6,Update articles with headlines mentioning NCD or NI or the WHO.,TNCA707,Create(l4 v l5 v l6),command
+W204,7,Remove articles relating to North Ireland.,TNCA757,"Update(l5, neg(l5)),Update(l5, ?)",command
+W204,8,Add articles with headline for NI referring to National Insurance.,TNCA825,"Update(?, l7)",command
+W204,9,Update list of articles for SARS-CoV-2 instead of COVID-19.,TNCA881,"Update(l1, l8)",command
+W204,12,Create new list of articles for flu.,TNCA1009,"Update(l8 ^ l9, l10)",command
+W204,13,Remove articles from list relating to COVID-19.,TNCA1080,Create(neg(l1)),command
+W205,2,Can I see news articles about COVID-19?,TNCA535,Create(l1),question
+W205,4,Can I just see the articles that only contain news about a vaccination or a treatment?,TNCA638,"Update(l2, l2 v l3)",question
+W205,5,Can I see more articles that show information other than vaccination or treatment?,TNCA678,Delete(l2 v l3),question
+W205,6,"Can I see articles that only contain NCD, NI, or WHO in the headline?",TNCA705,Create(l4 v l5 v l6),question
+W205,7,Can I see articles with NI in the headline excluding North Ireland?,TNCA760,"Update(l5, ?),Update(l5, neg(l5))",question
+W205,8,I meant NI to search for National Insurance.,TNCA826,"Update(?, l7)",statement
+W205,9,Can I see articles about SARS-CoV-2? I'm finished searching for COVID-19,TNCA884,"Update(l1, l8)",question
+W205,11,"Can I see articles that are focused on the economy instead of only containing NCD, NI, or WHO in the headline.",TNCA972,"Update(f1:(l4 ^ l7 ^ l6), l9)",question
+W205,12,Can I see different articles that are related to the flu?,TNCA1008,"Update(l8 ^ l9, l10),Create(l10)",question
+W205,13,Can I only see the articles that exclude COVID-19?,TNCA1072,Create(neg(l1)),question
+W206,2,show me news articles about COVID-19,TNCA532,Create(l1),command
+W206,3,show me just the articles about vaccination,TNCA573,"Create(l2),Update(l1, l2)",command
+W206,4,also show me the articles about treatment,TNCA633,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W206,6,"shows me news articles with WHO, NCD, or NI in the headline",TNCA706,Create(l4 v l5 v l6),command
+W206,7,I did not mean NI as in North Ireland,TNCA765,"Update(l5, ?)",statement
+W206,8,I meant National Insurance,TNCA827,"Update(?, l7)",statement
+W206,9,Shows me news articles about SARS-CoV-2 instead of COVID-19 with the same headlines,TNCA893,"Update(l1, l8)",command
+W206,10,What did I previously ask you to do?,TNCA937,Read(Q10),question
+W206,11,instead of headlines show me news articles about the economy ,TNCA977,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W206,12,Show me only articles about the flu now,TNCA1019,Create(l10),command
+W206,13,Do not show my any articles about COVID-19,TNCA1069,Create(neg(l1)),command
+W207,2,Give me news articles about COVID-19,TNCA532,Create(l1),command
+W207,3,Narrow the list down to articles about vaccination,TNCA581,Create(l2),command
+W207,4,add articles about treatment,TNCA633,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W207,5,remove articles on vaccination and treatment,TNCA1118,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W207,6,"narrow the list to articles only containing headlines with the words NCD, NI, or WHO",TNCA707,Create(l4 v l5 v l6),command
+W207,8,NI is equal to National Insurance,TNCA822,"Update(?, l7)",statement
+W207,9,Remove COVID-19 articles and add articles on SARS-CoV-2,TNCA891,"Update(l1, l8)",command
+W207,10,can you repeat my last request?,TNCA929,Read(Q10),question
+W207,11,"Remove articles with headlines containing NCD, NI, WHO, and add articles about the economy",TNCA1156,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W207,12,Find articles about the flu,TNCA1010,"Update(l8 ^ l9, l10),Create(l10)",command
+W207,13,Remove articles on COVID-19,TNCA1071,Create(neg(l1)),command
+W208,2,Get me news articles on COVID-19,TNCA532,Create(l1),command
+W208,3,Only show me the articles that are also about vaccination.,TNCA582,Create(l2),command
+W208,4,Also show me any articles that are about treatment.,TNCA633,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W208,5,Now show me all of the articles that aren't about vaccination or treatment.,TNCA1125,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W208,6,Show me all of the articles that have NCD or NI or WHO in the headline.,TNCA706,Create(l4 v l5 v l6),command
+W208,7,"Don't show me any articles where NI means ""North Ireland"".",TNCA761,"Update(l5, ?)",command
+W208,8,"Show me articles where ""NI"" in the headline means ""National Insurance""",TNCA830,"Update(?, l7)",command
+W208,9,"Instead of articles about COVID-19 that match the criteria I gave you, show me articles about SARS-CoV-2 that match the criteria.",TNCA889,"Update(l1, l8)",command
+W208,10,Show me which criteria I asked you to use when showing me the list of articles.,TNCA935,Read(Q10),command
+W208,11,"Instead of articles that match the criteria I gave you about the headline, show me articles that are also about the economy.",TNCA1153,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W208,12,"Ignore all the criteria I gave you before, and just show me articles about flu.",TNCA1007,"Update(l8 ^ l9, l10)",command
+W208,13,Show me only those articles from the set you gave me that aren't about COVID-19.,TNCA1081,Create(neg(l1)),command
+W209,2,Can you get me all new articles about COVID-19?,TNCA536,Create(l1),question
+W209,3,Can you only include news articles that contain mention of a vaccination?,TNCA575,"Create(l2),Update(l1, l2)",question
+W209,4,Add news about treatment to the list,TNCA633,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W209,5,Exclude vaccination and treatment from the list but include everything else.,TNCA1118,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W209,6,"Modify the list to show articles with NCD, NI or WHO in the headline",TNCA706,Create(l4 v l5 v l6),command
+W209,7,Remove North Ireland from the heading list,TNCA769,"Update(l5, ?),Update(l5, neg(l5))",command
+W209,8,NI stands for National Insurance and not North Ireland. Adjust accordingly.,TNCA823,"Update(?, l7)",statement
+W209,9,"In addition to the previouslly mentioned keywords in the title, change the articles to include SARS-CoV-2 instead of COVID-19",TNCA888,"Update(l1, l8)",command
+W209,10,Can you tell me what the latest search parameters were?,TNCA930,Read(Q10),question
+W209,11,"I need all articles to be about the economy.  Headline doesn't need to contact NCD, NI, or WHO.",TNCA1152,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",statement
+W209,12,Start a new search with articles about the flu,TNCA1020,"Update(l8 ^ l9, l10)",command
+W209,13,Remove all articles that mention COVID-19,TNCA1071,Create(neg(l1)),command
+W210,2,please find all news articles on COVID-19,TNCA532,Create(l1),command
+W210,4,please find news articles about vaccination and treatment,TNCA634,"Update(l2, l2 ^ l3)",command
+W210,5,please find articles not about vaccination or treatment,TNCA1125,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W210,6,"please find articles with NCD, NI, and/or WHO in the headline",TNCA706,Create(l4 v l5 v l6),command
+W210,7,NI does not refer to North Ireland,TNCA758,"Update(l5, ?)",statement
+W210,8,I meant National Insurance,TNCA827,"Update(?, l7)",statement
+W210,9,please find news articles about SARS-CoV-2 instead of COVID-19 ,TNCA880,"Update(l1, l8)",command
+W210,10,can you please repeat the previous information I provided?,TNCA929,Read(Q10),question
+W210,11,"please find articles about the economy instead of articles with NCD, NI, or WHO in the headline",TNCA1155,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W210,12,please find news articles about the flu and ignore my previous instructions,TNCA1014,"Update(l8 ^ l9, l10)",command
+W210,13,please remove articles about COVID-19 from the list,TNCA1071,Create(neg(l1)),command
+W211,2,Give me COVID-19 news,TNCA533,Create(l1),command
+W211,3,show me info about vaccination,TNCA571,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W211,5,"forget about vaccination and treatment, give me other articles",TNCA1121,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W211,6,"Give me articles with NCD, NI, WHO in the headline",TNCA706,Create(l4 v l5 v l6),command
+W211,7,I didn't mean North Ireland,TNCA764,"Update(l5, ?)",statement
+W211,8,Show me things with National Insurance,TNCA830,"Update(?, l7)",command
+W211,9,And also show me about SARS-CoV-2 instead of COVID-19 with those headlines,TNCA883,"Update(l1, l8)",command
+W211,10,What is this search about?,TNCA939,Read(Q10),question
+W211,12,Now show me articles about the flu,TNCA1013,"Update(l8 ^ l9, l10),Create(l10)",command
+W211,13,Without showing me articles about COVID-19,TNCA1082,Create(neg(l1)),command
+W212,2,Please get some news articles about COVID-19,TNCA532,Create(l1),command
+W212,3,Keep articles about a vaccination,TNCA580,Create(l2),command
+W212,4,Add articles about treatment,TNCA633,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W212,5,Take away articles about vaccination and treatment,TNCA1118,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W212,6,"Show articles with NCD, NI or WHO in the headline",TNCA706,Create(l4 v l5 v l6),command
+W212,7,Remove articles about North Ireland,TNCA757,"Update(l5, neg(l5)),Update(l5, ?)",command
+W212,8,Show articles about National Insurance,TNCA830,"Update(?, l7)",command
+W212,9,Show articles about SARS-CoV2. Remove articles about COVID-19.,TNCA880,"Update(l1, l8)",command
+W212,10,Show previous search,TNCA936,Read(Q10),command
+W212,11,"Show articles about the economy. Remove articles containing the headline NCD, NI or WHO.",TNCA1157,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W212,12,Restart search. Show articles about flu.,TNCA1018,"Update(l8 ^ l9, l10)",command
+W212,13,Remove articles about COVID-19.,TNCA1071,Create(neg(l1)),command
+W213,2,compile list of news articles subject COVID-19,TNCA538,Create(l1),command
+W213,3,reduce list to only show vaccination articles,TNCA584,Create(l2),command
+W213,4,add articles about treatment,TNCA633,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W213,7,remove North Ireland articles,TNCA768,"Update(l5, neg(l5)),Update(l5, ?)",command
+W213,9,edit news stories list to include subject SARS-CoV-2 headline NCD headline National Insurance headline WHO minus subject COVID-19,TNCA881,"Update(l1, l8)",command
+W213,10,repeat directions to populate list news,TNCA934,Read(Q10),command
+W213,11,news articles add subject economy headline minus NCD minus National Insurance minus WHO,TNCA1154,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W213,12,"populate news articles subject ""flu""",TNCA1016,"Update(l8 ^ l9, l10),Create(l10)",command
+W213,13,edit list minus subject COVID-19,TNCA1070,Create(neg(l1)),command
+W214,2,Can you please get me news on COVID-19?,TNCA536,Create(l1),question
+W214,3,can you please limit the articles to be about the vaccination?,TNCA575,"Create(l2),Update(l1, l2)",question
+W214,4,or are there any articles about the treatment?,TNCA640,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) v l3)",question
+W214,5,can you please get me all the articles not just limited to vaccination or treatment?,TNCA679,Delete(l2 v l3),question
+W214,6,"please show only articles with headlines containing NCD, NI or WHO",TNCA707,Create(l4 v l5 v l6),command
+W214,7,I did not mean North Ireland for NI,TNCA763,"Update(l5, ?)",statement
+W214,8,I meant National Insurance,TNCA827,"Update(?, l7)",statement
+W214,9,can you get me news article for SARS-CoV-2 instead of COVID-19?,TNCA885,"Update(l1, l8)",question
+W214,10,what was my previous search criteria?,TNCA941,Read(Q10),question
+W214,11,can you please limit the articles to be about the economy and remove the headline conditions?,TNCA973,"Update(f1:(l4 ^ l7 ^ l6), l9)",question
+W214,12,cancel all search criteria and get me news articles about flu,TNCA1007,"Update(l8 ^ l9, l10)",command
+W214,13,limit the articles to be not about COVID-19,TNCA1076,Create(neg(l1)),command
+W215,2,please get me news articles on the COVID-19 ,TNCA532,Create(l1),command
+W215,3,i want it to contain only news articles about the vaccination,TNCA579,Create(l2),statement
+W215,4,You can also news articles about the possible treatment,TNCA635,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",statement
+W215,6,"include just news articles that contain WHO, or NCD or NI in the headline.",TNCA706,Create(l4 v l5 v l6),command
+W215,7,please remove news articles that have North Ireland as that is not what I mean.,TNCA766,"Update(l5, ?)",command
+W215,8,the news articles with National Insurance should be added to the list,TNCA832,"Update(?, l7)",statement
+W215,9,now you have to include SARS-CoV-2 rather than COVID-19 in the list,TNCA890,"Update(l1, l8)",command
+W215,12,now change the list to contain news articles about flu.,TNCA1012,"Update(l8 ^ l9, l10),Create(l10)",command
+W215,13,Please go ahead and include news articles that does not include COVID-19.,TNCA1078,Create(neg(l1)),command
+W216,2,find articles related to covid-19,TNCA532,Create(l1),command
+W216,3,keep articles related to vaccination,TNCA580,Create(l2),command
+W216,4,add articles about treatment,TNCA633,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W216,7,Exclude North Ireland,TNCA757,"Update(l5, neg(l5)),Update(l5, ?)",command
+W216,8,I meant National Insurance,TNCA827,"Update(?, l7)",statement
+W216,10,What did I search for?,TNCA937,Read(Q10),question
+W216,11,delete headline keywords and find economy,TNCA974,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W216,12,delete all keywords and find flu,TNCA1007,"Update(l8 ^ l9, l10)",command
+W216,13,exclude results about covid-19,TNCA1071,Create(neg(l1)),command
+W217,2,tell me some news about COVID-19,TNCA532,Create(l1),command
+W217,3,tell me only about the vaccination related,TNCA573,"Create(l2),Update(l1, l2)",command
+W217,5,tell me more related articles except vaccination or treatment,TNCA1125,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W217,8,I mean National Insurance,TNCA827,"Update(?, l7)",statement
+W217,9,Give me some news about SARS-CoV-2 instread of COVID-19 from the same sources,TNCA880,"Update(l1, l8)",command
+W217,11,tell me some economy news from theses sources instread of headline,TNCA980,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W217,12,start a new subscription with topic flu,TNCA1021,"Update(l8 ^ l9, l10)",command
+W217,13,remove COVID-19 from the subscription,TNCA1079,Create(neg(l1)),command
+W218,2,Find news articles on COVID-19.,TNCA532,Create(l1),command
+W218,3,Filter and keep articles containing the word vaccination.,TNCA577,Create(l2),command
+W218,4,Alter previous filter and keep articles containing the word treatment.,TNCA637,"Update(l2, l2 v l3)",command
+W218,6,Filter the articles by headline containing the words NCD or NI or WHO.,TNCA708,Create(l4 v l5 v l6),command
+W218,7,Hide results containing North Ireland.,TNCA762,"Update(l5, ?),Update(l5, neg(l5))",command
+W218,8,National Insurance.,TNCA824,"Update(?, l7)",command
+W218,9,"Change my search inquiry for SARS-CoV2 instead of COVID-19, keep the headline filter.",TNCA886,"Update(l1, l8)",command
+W218,10,What was my last search?,TNCA941,Read(Q10),question
+W218,11,"Cancel the headline filter, find articles about economy.",TNCA974,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W218,12,"Cancel all filters, find articles about flu.",TNCA1007,"Update(l8 ^ l9, l10)",command
+W218,13,Hide articles about COVID-19.,TNCA1074,Create(neg(l1)),command
+W219,2,please find news on Covid-19,TNCA532,Create(l1),command
+W219,3,"News Bot, please show me only recent articles about vaccination",TNCA573,"Create(l2),Update(l1, l2)",command
+W219,6,"News Bot, please show me only recent articles that have the word ""NCD"" or ""NI"" or ""WHO"" in its headline",TNCA706,Create(l4 v l5 v l6),command
+W219,8,I was referring to National Insurance,TNCA829,"Update(?, l7)",statement
+W219,10,"News Bot, please show me my previous requests",TNCA936,Read(Q10),command
+W219,12,"News Bot, forget about my past requests, just show me a new search for flu, ",TNCA1007,"Update(l8 ^ l9, l10)",command
+W220,2,please get me news articles on COVID-19.,TNCA532,Create(l1),command
+W220,6,"only find me articles with NCD, NI and the WHO in the headline.",TNCA706,Create(l4 v l5 v l6),command
+W220,8,I wanted to see articles on National Insurance.,TNCA828,"Update(?, l7)",statement
+W220,9,Can you give me different articles from the ones you have given me? I would now like articles about SARS-CoV-2 and NOT COVID-19.,TNCA887,"Update(l1, l8)",question
+W220,10,Can you please tell me what I had previously requested from you?,TNCA930,Read(Q10),question
+W221,2,Give me a list of all news articles on COVID-19.,TNCA534,Create(l1),command
+W221,3,Please show just news articles discussing vaccination.,TNCA572,"Create(l2),Update(l1, l2)",command
+W221,4,Please include news articles that talk about treatment.,TNCA633,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W221,5,Please show me the news articles that do not discuss vaccination or treatment.,TNCA1125,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W221,6,"Please show me news articles that have the words NCD, NI, or WHO in the headline.",TNCA706,Create(l4 v l5 v l6),command
+W221,7,Please exclude news articles that contain the North Ireland.,TNCA757,"Update(l5, neg(l5)),Update(l5, ?)",command
+W221,8,I would like to see news articles that include National Insurance in the headline.,TNCA828,"Update(?, l7)",statement
+W221,9,Now show me a list of news articles about SARS-CoV-2 instead of COVID-19.,TNCA880,"Update(l1, l8)",command
+W221,12,Please show me a new list of new articles about the flu.,TNCA1015,"Update(l8 ^ l9, l10)",command
+W221,13,Show me only news articles in this list that are not about COVID-19.,TNCA1081,Create(neg(l1)),command
+W222,2,Find articles about COVID-19,TNCA532,Create(l1),command
+W222,3,filter to mention only vaccination,TNCA577,Create(l2),command
+W222,5,exclude vaccination AND treatment,TNCA1120,"Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W222,6,headline contains NCD or NI or WHO,TNCA710,Create(l4 v l5 v l6),command
+W222,7,"repeat last, 'NI' not equal 'North Ireland'",TNCA758,"Update(l5, ?)",command
+W222,8,NI means National Insurance,TNCA823,"Update(?, l7)",statement
+W222,9,"repeat previous, replace COVID-19 with SARS-CoV-2",TNCA892,"Update(l1, l8)",command
+W222,11,"repeat search, reset headline, reset filter, new filter: contains economy",TNCA979,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W222,12,"reset search, new search flu",TNCA1017,"Update(l8 ^ l9, l10)",command
+W222,13,filter does not equal COVID-19,TNCA1073,Create(neg(l1)),command
+W223,2,Find all news about COVID-19,TNCA532,Create(l1),command
+W223,3,Filter out the articles that don't mention vaccination,TNCA578,Create(l2),command
+W223,4,Include any articles that talk about treatments for the disease,TNCA633,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W223,5,I only want to see news articles that are not about and don't mention vaccinations and treatment,TNCA1123,"Update(l2 v l3, neg(l2) ^ neg(l3))",statement
+W223,6,"I only want to see news articles where the headline includes either NCD, NI or WHO.",TNCA711,Create(l4 v l5 v l6),statement
+W223,7,Exclude any results with North Ireland in the headline,TNCA757,"Update(l5, neg(l5)),Update(l5, ?)",command
+W223,8,NI stands for National Insurance.,TNCA823,"Update(?, l7)",statement
+W223,9,I want to see news articles mentioning SARS-CoV-2 and not about COVID-19,TNCA887,"Update(l1, l8)",statement
+W223,10,What type of news article did I search for last?,TNCA941,Read(Q10),question
+W223,11,"Instead of the headlines, please show news articles that talk about the economy",TNCA977,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W223,12,"Starting over, I would now like to see all news articles about the flu.",TNCA1022,"Update(l8 ^ l9, l10)",statement
+W223,13,Please eliminate all articles that talk about COVID-19.,TNCA1071,Create(neg(l1)),command
+W224,2,news articles about covid-19,TNGB539,Create(l1),command
+W224,5,do not include vaccination or treatment,TNGB1130,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W224,6,"headline containing: NCD, NI or WHO",TNGB716,Create(l4 v l5 v l6),command
+W224,7,NI except north ireland,TNGB772,"Update(l5, ?),Update(l5, neg(l5))",command
+W224,8,National insurance,TNGB835,"Update(?, l7)",command
+W224,9,search news containing SARS-CoV-2 not COVID-19,TNGB894,"Update(l1, l8)",command
+W224,10,go back to the last step,TNGB945,Read(Q10),command
+W224,12,start again and search news about the flu,TNGB1026,"Update(l8 ^ l9, l10)",command
+W224,13,minus COVID-19,TNGB1090,Create(neg(l1)),command
+W225,2,Show me all the news articles about COVID-19,TNGB540,Create(l1),command
+W225,3,Just include the articles about vaccination.,TNGB588,"Create(l2),Update(l1, l2)",command
+W225,4,also include the articles that refer to treatment.,TNGB646,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W225,5,Include all other articles as well as those surrounding vaccination and treatment.,TNGB682,Delete(l2 v l3),command
+W225,6,"Show me the articles that contain NCD , NI or WHO in the headline.",TNGB713,Create(l4 v l5 v l6),command
+W225,7,I did not intend for NI to refer to North Ireland,TNGB779,"Update(l5, ?)",statement
+W225,8,National Insurance.,TNGB835,"Update(?, l7)",command
+W225,9,"Instead of articles about COVID-19, show me those about SARS-CoV-2",TNGB902,"Update(l1, l8)",command
+W225,10,Tell me my previous entries.,TNGB942,Read(Q10),command
+W225,12,Only show me articles about flu.,TNGB1024,"Update(l8 ^ l9, l10)",command
+W225,13,Remove articles including COVID-19,TNGB1085,Create(neg(l1)),command
+W226,2,Get me news articles about COVID-19,TNGB540,Create(l1),command
+W226,4,get me articles about treatment,TNGB645,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l1 ^ l2, l3)",command
+W226,6,"get me articles about ncd, ni and who in the headline",TNGB713,Create(l4 v l5 v l6),command
+W226,7,I didn't mean North Ireland as NI,TNGB780,"Update(l5, ?)",statement
+W226,8,I meant National Insurance,TNGB839,"Update(?, l7)",statement
+W226,9,Get me articles about SARS-CoV-2 instead of Covid-19,TNGB894,"Update(l1, l8)",command
+W226,12,get me articles about flu,TNGB1023,"Update(l8 ^ l9, l10),Create(l10)",command
+W226,13,get me articles that are not about covid-19,TNGB1084,Create(neg(l1)),command
+W227,2,get articles about COVID-19,TNGB540,Create(l1),command
+W227,4,get articles about covid treatments,TNGB645,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l1 ^ l2, l3)",command
+W227,7,NI is not North Ireland,TNGB773,"Update(l5, ?)",statement
+W227,8,NI is national insurance,TNGB833,"Update(?, l7)",statement
+W227,9,get articles about SARS-CoV-2 not COVID-19,TNGB894,"Update(l1, l8)",command
+W227,10,list previous searches,TNGB942,Read(Q10),command
+W227,12,get articles about flu,TNGB1023,"Update(l8 ^ l9, l10),Create(l10)",command
+W227,13,get articles where article not contains COVID-19,TNGB1089,Create(neg(l1)),command
+W228,2,Give me a list of news articles about COVID-19,TNGB542,Create(l1),command
+W228,3,Show me articles from the list including vaccinations,TNGB596,Create(l2),command
+W228,4,Show me news articles with treatments,TNGB645,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l1 ^ l2, l3)",command
+W228,6,Show me articles with WHO or NI or NCD in the headline,TNGB713,Create(l4 v l5 v l6),command
+W228,7,Remove North Ireland from the list,TNGB770,"Update(l5, ?),Update(l5, neg(l5))",command
+W228,8,Show me National Insurance articles,TNGB842,"Update(?, l7)",command
+W228,9,Show me articles about SARS-CoV-2 and not COVID-19,TNGB894,"Update(l1, l8)",command
+W228,12,Show me articles that have flu within,TNGB1023,"Update(l8 ^ l9, l10),Create(l10)",command
+W228,13,Show me articles that do not contain COVID-19,TNGB1085,Create(neg(l1)),command
+W229,2,Find me articles on COVID-19,TNGB540,Create(l1),command
+W229,4,From that list rerun and add treatment,TNGB651,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",command
+W229,8,"For this query let ""NI"" is equal to ""National Insurance""",TNGB838,"Update(?, l7)",statement
+W229,12,"Find me articles about ""Flu"" ",TNGB1023,"Update(l8 ^ l9, l10),Create(l10)",command
+W230,2,Can I get some news articles about COVID-19,TNGB543,Create(l1),question
+W230,4,Can you include more search results about a treatment,TNGB644,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",question
+W230,5,Show me more articles without links to vaccinations or treatments,TNGB1127,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W230,6,"Show me articles that include either NCD, NI or WHO in the headline",TNGB713,Create(l4 v l5 v l6),command
+W230,7,Remove results including North Ireland,TNGB770,"Update(l5, ?),Update(l5, neg(l5))",command
+W230,8,Add National Insurance abbreviation as NI to your dictionary please,TNGB836,"Update(?, l7)",command
+W230,9,"Show more articles about the SARS-CoV2, remove results about COVID-19",TNGB894,"Update(l1, l8)",command
+W230,10,Remind me what I was doing,TNGB949,Read(Q10),command
+W230,12,Include articles about the flu in the search,TNGB1023,"Update(l8 ^ l9, l10),Create(l10)",command
+W230,13,Remove articles about COVID-19 from the search,TNGB1085,Create(neg(l1)),command
+W231,2,I'd like all news articles on COVID-19,TNGB546,Create(l1),statement
+W231,4,Now show me all articles which mention a treatment.,TNGB645,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l1 ^ l2, l3)",command
+W231,5,"Show me all articles, but this time exclude any mentioning vaccination or treatment.",TNGB1127,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W231,6,"Now show me articles where the headline includes at least one of the following terms: NCD, NI or WHO.",TNGB714,Create(l4 v l5 v l6),command
+W231,7,Omit articles which mention North Ireland.,TNGB770,"Update(l5, ?),Update(l5, neg(l5))",command
+W231,8,Please now assume that NI within articles refers to National Insurance.,TNGB841,"Update(?, l7)",command
+W231,9,"Please alter the list to show articles which reference SARS-CoV-2, as opposed to COVID-19.",TNGB895,"Update(l1, l8)",command
+W231,10,"Please ignore the last query, and return to the last step of article search results.",TNGB946,Read(Q10),command
+W231,12,"New article search, find all articles which mention flu.",TNGB1026,"Update(l8 ^ l9, l10)",command
+W231,13,Please exclude search results which reference COVID-19.,TNGB1085,Create(neg(l1)),command
+W232,2,Please give me a list of news articles which cover the COVID-19.,TNGB542,Create(l1),command
+W232,3,Remove all articles which do not cover the subject of vaccination.,TNGB595,Create(l2),command
+W232,6,"Remove articles where the headline does not contain NCD, NI or WHO.",TNGB720,Create(l4 v l5 v l6),command
+W232,7,"Please do not interpret 'NI' as ""North Ireland"".",TNGB782,"Update(l5, ?)",command
+W232,8,"'NI' may be interpreted as ""National Insurance"".",TNGB834,"Update(?, l7)",statement
+W232,9,"Please search for the subject ""SARS-Cov-2"" instead of ""COVID-19""",TNGB894,"Update(l1, l8)",command
+W232,10,Please list all search terms and parameters which are currently being applied.,TNGB947,Read(Q10),command
+W232,11,Please search for articles on the subject of the economy and with any headline.,TNGB981,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W232,12,Please give me a new list of news articles on the subject of flu.,TNGB1027,"Update(l8 ^ l9, l10)",command
+W232,13,Please remove all articles which also cover the subject of COVID-19.,TNGB1085,Create(neg(l1)),command
+W233,2,Show me all news regarding COVID-19,TNGB540,Create(l1),command
+W233,3,Show only those articles that contain information about a vaccination,TNGB591,Create(l2),command
+W233,5,Can you change the articles to show information other than a vaccination or treatment?,TNGB681,Delete(l2 v l3),question
+W233,6,"Now please show only articles with only NCD, NI and WHO in the headline",TNGB713,Create(l4 v l5 v l6),command
+W233,7,I do not mean North Ireland,TNGB778,"Update(l5, ?)",statement
+W233,8,I actually meant National Insurance,TNGB839,"Update(?, l7)",statement
+W233,9,Can you now keep the same headline but change the articles to SARS-CoV-2 instead of COVID-19?,TNGB899,"Update(l1, l8)",question
+W233,10,Can you show me my previous requests?,TNGB944,Read(Q10),question
+W233,11,Can you only show articles about the economy and not the other headline,TNGB983,"Update(f1:(l4 ^ l7 ^ l6), l9)",question
+W233,12,Can you now only show articles referring to the flu virus?,TNGB1031,"Update(l8 ^ l9, l10)",question
+W233,13,Please disregard any articles relating to COVID-19,TNGB1085,Create(neg(l1)),command
+W234,2,Show me all news about COVID-19,TNGB540,Create(l1),command
+W234,3,Show me just ones about a vaccination,TNGB590,Create(l2),command
+W234,4,Include articles about treatment,TNGB646,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W234,5,Include all coronavirus articles not about vaccination or treatment,TNGB1128,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W234,6,"Show me just those articles with headlines: NCD, NI or WHO",TNGB714,Create(l4 v l5 v l6),command
+W234,7,I don’t mean North Ireland,TNGB778,"Update(l5, ?)",statement
+W234,8,I meant National Insurance,TNGB839,"Update(?, l7)",statement
+W234,9,Adjust that query to show me about SARS-CoV-2 instead of COVID-19,TNGB894,"Update(l1, l8)",command
+W234,11,Drop matching the headline but narrow to articles about the economy,TNGB985,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W234,12,"Instead, show me all articles about flu",TNGB1035,"Update(l8 ^ l9, l10)",command
+W234,13,Exclude COVID-19 from last query,TNGB1085,Create(neg(l1)),command
+W235,2,Can you find me articles on the COVID-19?,TNGB544,Create(l1),question
+W235,3,Can you only include articles about vaccination?,TNGB592,"Create(l2),Update(l1, l2)",question
+W235,4,can you also include articles that are about treatment?,TNGB643,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",question
+W235,5,can you show me all the articles not about vaccination or treatment?,TNGB1129,"Update(l2 v l3, neg(l2) v neg(l3))",question
+W235,6,"can you show me articles containing the headline 'NCD', 'NI' or 'WHO'",TNGB719,Create(l4 v l5 v l6),question
+W235,7,I did not mean North Ireland,TNGB778,"Update(l5, ?)",statement
+W235,8,I meant National Insurance,TNGB839,"Update(?, l7)",statement
+W235,9,Can you show me articles about SARS-CoV-2 instead of COVID-19 with the same headlines as before,TNGB900,"Update(l1, l8)",question
+W235,10,what was my previous search parameters?,TNGB951,Read(Q10),question
+W235,11,"instead of the previous headlines, please show me articles about the economy",TNGB987,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W235,12,please ignore all previous instructions. can you show me articles about the flu?,TNGB1025,"Update(l8 ^ l9, l10)",command
+W235,13,articles that are not COVID-19 related,TNGB1086,Create(neg(l1)),command
+W236,2,filter news articles related to COVID-19,TNGB545,Create(l1),command
+W236,4,please also include articles that are related to treatment,TNGB646,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W236,5,please show me all articles related to novel coronavirus and its vaccination or treatment,TNGB685,Delete(l2 v l3),command
+W236,6,"please filter articles with headline by NCD, NI or WHO",TNGB715,Create(l4 v l5 v l6),command
+W236,7,"Could you search alternative options for acronym NI, not North Ireland",TNGB775,"Update(l5, ?),Update(l5, neg(l5))",question
+W236,8,"I meant National Insurance, search for it",TNGB839,"Update(?, l7)",statement
+W236,10,Please show me what I told you one search ago,TNGB948,Read(Q10),command
+W236,12,Could you change the list so it shows articles related to flu,TNGB1033,"Update(l8 ^ l9, l10),Create(l10)",question
+W236,13,Now remove articles about COVID-19,TNGB1085,Create(neg(l1)),command
+W237,2,Show me articles on COVID-19,TNGB540,Create(l1),command
+W237,3,Only keep the articles that contain news about a vaccination,TNGB588,"Create(l2),Update(l1, l2)",command
+W237,4,Show articles about vaccination and treatment,TNGB647,"Update(l2, l2 ^ l3)",command
+W237,5,Show me article that arn't about vaccination or treatment,TNGB1128,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W237,6,"Only show me articles about the virus with NCD, NI, or WHO in the headline",TNGB713,Create(l4 v l5 v l6),command
+W237,7,Dont show me articles about North Ireland,TNGB776,"Update(l5, ?),Update(l5, neg(l5))",command
+W237,8,Include articles with National Insurance mentioned,TNGB840,"Update(?, l7)",command
+W237,9,Now do a new search on articles about SARS-CoV-2 and not COVID-19 with NCD in the headline,TNGB894,"Update(l1, l8)",command
+W237,10,Repeat the previous search,TNGB942,Read(Q10),command
+W237,12,I now want to see articles about the flu,TNGB1034,"Update(l8 ^ l9, l10),Create(l10)",statement
+W237,13,Remove articles about COVID-19,TNGB1085,Create(neg(l1)),command
+W238,2,Find all COVID-19 articles,TNGB541,Create(l1),command
+W238,3,limit to vaccination articles,TNGB594,Create(l2),command
+W238,4,add treatment articles,TNGB642,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",command
+W238,5,remove vaccination and treatment from original list,TNGB1131,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W238,6,show headline containing NCD or NI or WHO,TNGB716,Create(l4 v l5 v l6),command
+W238,7,remove North Ireland,TNGB770,"Update(l5, ?),Update(l5, neg(l5))",command
+W238,8,NI is national insurance,TNGB833,"Update(?, l7)",statement
+W238,9,swap COVID-19 for SARS-CoV-2,TNGB903,"Update(l1, l8)",command
+W238,10,remind me of the search details,TNGB942,Read(Q10),command
+W238,11,remove headline search find economy instead,TNGB982,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W238,12,new search for flu,TNGB1028,"Update(l8 ^ l9, l10)",command
+W238,13,remove COVID-19 from this search,TNGB1085,Create(neg(l1)),command
+W239,2,Please find me all news articles concerning the COVID-19.,TNGB540,Create(l1),command
+W239,3,Can you just find me articles articles about a vaccination for the disease?,TNGB586,"Create(l2),Update(l1, l2)",question
+W239,4,Can you now find me articles just about a treatment for the virus?,TNGB650,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l1 ^ l2, l3)",question
+W239,5,Can you now find me articles about the disease but not those concerning a Vaccination or treatments.,TNGB1129,"Update(l2 v l3, neg(l2) v neg(l3))",question
+W239,6,"Can you find me news articles about the virus that have the following in the headline: NCD, NI or WHO.",TNGB718,Create(l4 v l5 v l6),question
+W239,7,NI is not North Ireland. Please try again.,TNGB773,"Update(l5, ?)",statement
+W239,8,I mean National Insurance.,TNGB839,"Update(?, l7)",statement
+W239,9,Can you find me articles with those initials in the title but to do with SARS-Cov-2 rather than Covid-19?,TNGB898,"Update(l1, l8)",question
+W239,10,Can you please tell me what I asked to be found in the articles please?,TNGB943,Read(Q10),question
+W239,12,Can you now start a new list of articles that are about flu?,TNGB1032,"Update(l8 ^ l9, l10)",question
+W239,13,Please make sure there are no articles about COVID-19 in the list.,TNGB1091,Create(neg(l1)),command
+W240,2,Can you show me news articles about Covid-19?,TNGB544,Create(l1),question
+W240,3,Can you show me news articles about the vaccination?,TNCA585,"Create(l2),Update(l1, l2)",question
+W240,4,Can you show me news articles about treatment?,TNGB650,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l1 ^ l2, l3)",question
+W240,5,Can you show me news articles not about vaccination or treatment?,TNGB1129,"Update(l2 v l3, neg(l2) v neg(l3))",question
+W240,6,"Can you show me news articles including 'NCD', 'NI', or 'WHO' in the headline?",TNGB712,Create(l4 v l5 v l6),question
+W240,7,Can you exclude articles about North Ireland,TNGB774,"Update(l5, ?),Update(l5, neg(l5))",question
+W240,8,Can you include articles that mention 'National Insurance',TNGB837,"Update(?, l7)",question
+W240,9,Can you show articles about SARS-CoV-2 instead of COVID-19?,TNGB900,"Update(l1, l8)",question
+W240,10,Can you show me the current search parameters?,TNGB944,Read(Q10),question
+W240,11,"Cancel the search filter for articles containing 'NCD', 'NI', or 'WHO' in the headline. Can you show me articles that mention the economy?",TNGB984,"Update(f1:(l4 ^ l7 ^ l6), l9)",question
+W240,12,Conduct a new search. Can you show me articles about flu?,TNGB1025,"Update(l8 ^ l9, l10)",question
+W240,13,Can you filter these articles for the ones that do not mention COVID-19?,TNGB1087,Create(neg(l1)),question
+W241,2,Show me news about COVID-19 please,TNGB540,Create(l1),command
+W241,3,only show articles about vaccination,TNGB588,"Create(l2),Update(l1, l2)",command
+W241,4,add articles about treatment please,TNGB648,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W241,5,please remove filter on vaccination and treatment,TNGB684,Delete(l2 v l3),command
+W241,6,please filter articles on headline containing NCD or NI or WHO,TNGB715,Create(l4 v l5 v l6),command
+W241,7,Remove North Ireland flter,TNGB770,"Update(l5, ?),Update(l5, neg(l5))",command
+W241,9,change article subject from COVID-19 to SARS-CoV-2,TNGB901,"Update(l1, l8)",command
+W241,10,show current search details,TNGB942,Read(Q10),command
+W241,11,remove filter on headline and show articles about economy,TNGB982,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W241,12,start a new search for articles about flu,TNGB1028,"Update(l8 ^ l9, l10)",command
+W241,13,dont show any articles about COVID-19,TNGB1088,Create(neg(l1)),command
+W242,2,All news articles on the COVID-19 ,TNGB539,Create(l1),command
+W242,3,only vaccination articles,TNGB589,"Create(l2),Update(l1, l2)",command
+W242,4,also include treatment articles,TNGB642,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",command
+W242,5,any news articles not including vaccination or treatment,TNGB1126,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W242,6,"articles with NCD, NI or WHO in the headline",TNGB717,Create(l4 v l5 v l6),command
+W242,7,do not include articles about North Ireland,TNGB776,"Update(l5, ?),Update(l5, neg(l5))",command
+W242,8,in this instance NI means National Insurance,TNGB833,"Update(?, l7)",statement
+W242,9,articles containing SARS-CoV-2 but not including COVID-19,TNGB896,"Update(l1, l8)",command
+W242,12,a new search containing only articles about flu,TNGB1029,"Update(l8 ^ l9, l10)",command
+W242,13,remove articles about COVID-19,TNGB1085,Create(neg(l1)),command
+W243,2,Could you get me articles about covid-19?,TNGB544,Create(l1),question
+W243,4,could you add articles that mention treatments?,TNGB643,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",question
+W243,5,"show me all articles, not just the vaccination and treatment ones",TNGB686,Delete(l2 v l3),command
+W243,6,"narrow it down to articles with NCD, NI or WHO in the headline",TNGB713,Create(l4 v l5 v l6),command
+W243,7,I didn't mean North Ireland when I said NI,TNGB777,"Update(l5, ?)",statement
+W243,8,I meant National Insurance,TNGB839,"Update(?, l7)",statement
+W243,9,"Can you do that search again, but for SARS-Cov-2 instead of covid-19?",TNGB897,"Update(l1, l8)",question
+W243,10,What are we looking at at the moment?,TNGB950,Read(Q10),question
+W243,11,"instead of looking at headlines, can you show articles about the economy?",TNGB986,"Update(f1:(l4 ^ l7 ^ l6), l9)",question
+W243,12,"Can we start again from scratch, just looking at articles on the flu?",TNGB1030,"Update(l8 ^ l9, l10)",question
+W243,13,and could you remove articles about covid-19?,TNGB1083,Create(neg(l1)),question
+W244,2,"Hey, show me news articles on COVID-19",TNIN549,Create(l1),command
+W244,3,show me news articles on vaccination,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W244,4,display news articles on treatment ,TNIN653,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l1 ^ l2, l3)",command
+W244,6,show only those articles which have either NCD or NI or WHO in their headline,TNIN722,Create(l4 v l5 v l6),command
+W244,7,"Just correct NI, doesn't mean North Ireland so correct it",TNIN794,"Update(l5, ?)",command
+W244,8,I mean NI as National Insurance,TNIN849,"Update(?, l7)",statement
+W244,9,hey show me news articles on SARS-CoV-2 rather than COVID-19,TNIN904,"Update(l1, l8)",command
+W244,12,show me news articles related to flu,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W244,13,filter results so it should not have news articles on COVID-19,TNIN1097,Create(neg(l1)),command
+W245,2,List all news articles about the COVID-19 ,TNIN551,Create(l1),command
+W245,3,News articles about the vaccination for the disease,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W245,5,News articles about the disease excluding vaccination or treatment,TNIN1132,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W245,6,News articles about the disease that headlines with NCD or NI or WHO,TNIN722,Create(l4 v l5 v l6),command
+W245,7,I did not mean North Ireland for NI,TNIN790,"Update(l5, ?)",statement
+W245,8,I meant the National Insurance in mind.,TNIN850,"Update(?, l7)",statement
+W245,9,News articles about SARS-CoV-2 (instead of COVID-19),TNIN910,"Update(l1, l8)",command
+W245,12,News articles about flu,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W245,13,News articles that are not about COVID-19,TNIN1092,Create(neg(l1)),command
+W246,2,show me the news articles related to COVID-19,TNIN549,Create(l1),command
+W246,3,news about the vaccination,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W246,5,news other than vaccination or treatment,TNIN688,Delete(l2 v l3),command
+W246,6,"news with headline NCD, NI and WHO",TNIN722,Create(l4 v l5 v l6),command
+W246,7,"NI doesn't mean North Ireland, please revise",TNIN785,"Update(l5, ?)",statement
+W246,8,assume NI as National Insurance,TNIN847,"Update(?, l7)",command
+W246,9,News about SARS-CoV-2 instead of COVID-19,TNIN910,"Update(l1, l8)",command
+W246,12,forget everything and show me news about flu,TNIN1041,"Update(l8 ^ l9, l10)",command
+W246,13,exclude news about COVID-19 from the list,TNIN1096,Create(neg(l1)),command
+W247,2,list news articles about COVID-19 ,TNIN551,Create(l1),command
+W247,3,can you refine the list to articles about vaccination for the disease,TNIN600,"Create(l2),Update(l1, l2)",question
+W247,4,list can also include treatment options for the disease,TNIN659,"Update(l2, l2 v l3),Update(l1 ^ l2, l3)",command
+W247,5,can you list those news articles about the disease other than related to vaccination or treatment,TNIN689,Delete(l2 v l3),question
+W247,6,can you list articles related to the disease with headline NCD or NI or WHO,TNIN725,Create(l4 v l5 v l6),question
+W247,8,list articles with headline National Insurance,TNIN843,"Update(?, l7)",command
+W247,10,I actually forgot some of the things related to my request,TNIN954,Read(Q10),statement
+W247,11,Can you list news articles related to impact on economy  instead of the headline mentioned earlier,TNIN988,"Update(f1:(l4 ^ l7 ^ l6), l9)",question
+W247,12,Can you just discard everything i mentioned earlier and just list articles about flu,TNIN1037,"Update(l8 ^ l9, l10)",question
+W247,13,can you refine the list by excluding COVID-19 articles,TNIN1094,Create(neg(l1)),question
+W248,2,Can you please show me the news articles about COVID-19,TNIN550,Create(l1),question
+W248,3,Show the articles about vaccination for this disease,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W248,5,Can I get all the news articles about the disease except vaccination and treatment,TNIN1134,"Update(l2 v l3, neg(l2) ^ neg(l3))",question
+W248,6,Get me the articles about the disease with either NCD or NI or WHO in the headline,TNIN722,Create(l4 v l5 v l6),command
+W248,7,I didn't mean North Ireland,TNIN791,"Update(l5, ?)",statement
+W248,8,I mean NI for National Insurance,TNIN849,"Update(?, l7)",statement
+W248,9,I want the news articles about SARS-CoV-2 instead of COVID-19 ,TNUS917,"Update(l1, l8)",statement
+W248,11,Get me some articles about the disease that mentions about the economy nstead of previously mentioned headlines,TNIN989,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W248,12,Get me the news articles about flu,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W248,13,Show me the articles about the disease except COVID-19,TNIN1102,Create(neg(l1)),command
+W249,2,Fetch all articles related to COVID-19.,TNIN549,Create(l1),command
+W249,3,Show me only the ones about vaccination.,TNIN604,Create(l2),command
+W249,4,Include the ones about treatment as well.,TNIN657,"Update(l2, l2 v l3)",command
+W249,5,"Show me all the articles, not just the ones related to vaccination or treatment.",TNIN690,Delete(l2 v l3),command
+W249,6,"I'm only interested in the articles that contain NCD, NI or WHO in the headline.",TNIN726,Create(l4 v l5 v l6),statement
+W249,7,I was not referring to North Ireland.,TNIN791,"Update(l5, ?)",statement
+W249,8,I meant National Insurance.,TNIN850,"Update(?, l7)",statement
+W249,9,"Can you fetch articles about SARS-Cov-2, instead of COVID-19, with the same words that I mentioned earlier in the headline?",TNIN906,"Update(l1, l8)",question
+W249,11,"Okay, now can you ignore the headline and show me articles related to the economy?",TNIN991,"Update(f1:(l4 ^ l7 ^ l6), l9)",question
+W249,12,Forget all my previous requests and find all articles related to flu.,TNIN1041,"Update(l8 ^ l9, l10)",command
+W249,13,Show me the ones that do not refer to COVID-19.,TNIN1093,Create(neg(l1)),command
+W250,2,Show all articles on COVID-19 ,TNIN549,Create(l1),command
+W250,3,Show all articles about vaccination,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W250,4,Add articles on treatment to previous list,TNIN655,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W250,5,Show  all articles excluding those on vaccination and treatment,TNIN1138,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W250,6,"Show all articles having headline containing NCD, NI and WHO",TNIN729,Create(l4 v l5 v l6),command
+W250,7,Show all articles with headline containing NI but not containing North Ireland,TNIN796,"Update(l5, ?),Update(l5, neg(l5))",command
+W250,8,Expand NI to National Insurance and display previous list,TNIN848,"Update(?, l7)",command
+W250,9,Show all news articles replacing COVID-19 with  SARS-CoV-2 and same headline filters as before,TNIN912,"Update(l1, l8)",command
+W250,10,Display last query,TNIN953,Read(Q10),command
+W250,11,Show articles from last query about economy and any headline,TNIN992,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W250,12,Cancel last query and show all articles on flu,TNIN1038,"Update(l8 ^ l9, l10),Create(l10)",command
+W251,2,Show the news about COVID-19,TNIN549,Create(l1),command
+W251,3,show me the news about vaccination,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W251,5,show me the news articles that are not on vaccination or treatment.,TNIN1133,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W251,6,show me the articles that contain NCD or NI or Who as headline.,TNIN722,Create(l4 v l5 v l6),command
+W251,7,do not show me the articles that contain North Ireland instead it should contain NI only.,TNIN788,"Update(l5, ?),Update(l5, neg(l5))",command
+W251,8,show me the articles that has discusses about National Insurance in the disease.,TNIN843,"Update(?, l7)",command
+W251,9,show me the articles about SARS-Cov-2 instaed of COVID-19.,TNIN904,"Update(l1, l8)",command
+W251,10,show me the details about my previous search.,TNIN956,Read(Q10),command
+W251,11,Show me articles about the economy that does not have NCD or NI or WHO as headline.,TNIN1160,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",command
+W251,12,show me the articles about flu.,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W251,13,show me only those articles that are not about COVID-19,TNIN1093,Create(neg(l1)),command
+W252,2,"Hey, show me news articles on COVID-19",TNIN549,Create(l1),command
+W252,3,show me article having details about vaccination,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W252,5,show article which doesn't have vaccination or treatment ,TNIN1133,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W252,6,display article which must have NCD or NI or WHO in the headline,TNIN722,Create(l4 v l5 v l6),command
+W252,7,"hey you misunderstood, NI doesn't means North Ireland",TNIN785,"Update(l5, ?)",statement
+W252,8,so correct it's National Insurance,TNIN845,"Update(?, l7)",statement
+W252,9,Now show me articles about SARS-CoV2 rather than COVID-19,TNIN904,"Update(l1, l8)",command
+W252,10,show me all previous filters,TNIN956,Read(Q10),command
+W252,12,show me news articles about flu,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W252,13,filter that don't have COVID-19,TNIN1099,Create(neg(l1)),command
+W253,2,show me all the news articles on COVID-19,TNIN549,Create(l1),command
+W253,3,change the list to Coronavirus vaccination,TNIN602,"Create(l2),Update(l1, l2)",command
+W253,5,Show news that are not about coronavirus vaccination and treatment,TNIN1138,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W253,6,"Show me just the news articles in which NCD , NI , WHO is the headline",TNIN722,Create(l4 v l5 v l6),command
+W253,7,The NI that i meant is not North Ireland,TNIN797,"Update(l5, ?)",statement
+W253,8,with Ni i meant National Insurance,TNIN852,"Update(?, l7)",statement
+W253,10,what was my previous request in the chat? i forgot which news i asked for.,TNIN958,Read(Q10),question
+W253,12,Show news articles related to flu,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W253,13,show news articles not about COVID-19,TNIN1093,Create(neg(l1)),command
+W254,5,exclude vaccination and treatment related news items,TNIN1137,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W254,6,"headline contains one of : NCD, NI, WHO",TNIN723,Create(l4 v l5 v l6),command
+W254,7,headline does not contain North Ireland,TNIN789,"Update(l5, ?),Update(l5, neg(l5))",command
+W254,9,replace COVID-19 with SARS-CoV-2,TNIN911,"Update(l1, l8)",command
+W254,12,fresh search on flu,TNIN1042,"Update(l8 ^ l9, l10)",command
+W254,13,articles that are not about COVID-19,TNIN1092,Create(neg(l1)),command
+W255,2,get me news articles on COVID-19,TNIN549,Create(l1),command
+W255,3,get me news articles on vaccination,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W255,4,get me news articles on treatment,TNIN653,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l1 ^ l2, l3)",command
+W255,5,get me news articles apart from vaccination and treatment,TNIN687,Delete(l2 v l3),command
+W255,6,get me news articles with WHO or NCD or NI in the headline,TNIN722,Create(l4 v l5 v l6),command
+W255,7,get me news articles without North Ireland,TNIN783,"Update(l5, ?),Update(l5, neg(l5))",command
+W255,8,National Insurance,TNIN845,"Update(?, l7)",command
+W255,9,get me different articles including new articles about SARS-CoV-2 excluding COVID-19,TNIN904,"Update(l1, l8)",command
+W255,12,"get me different articles about flu, which I haven't mentioned",TNIN1043,"Update(l8 ^ l9, l10),Create(l10)",command
+W255,13,get me only news articles that are not about COVID-19,TNIN1093,Create(neg(l1)),command
+W256,2,Give me articles on COVID-19,TNIN549,Create(l1),command
+W256,3,All those related only to vaccination,TNIN599,Create(l2),command
+W256,4,along with the treatment articles,TNIN656,"Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",command
+W256,6,"reduce the list and give with the headline NCD, WHO, or NI",TNIN728,Create(l4 v l5 v l6),command
+W256,7,I do not want for North Ireland,TNIN793,"Update(l5, ?),Update(l5, neg(l5))",statement
+W256,8,I want National Insurance,TNIN850,"Update(?, l7)",statement
+W256,12,give all the articles about flu,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W256,13,remember nothing about COVID-19,TNIN1100,Create(neg(l1)),command
+W257,2,Please show some latest news articles about COVID-19,TNIN549,Create(l1),command
+W257,3,show me more articles about vaccination,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W257,5,show me articles not related to vaccination or treatment of this disease.,TNIN1133,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W257,6,"show me articles with NCD, NI or WHO as headline",TNIN722,Create(l4 v l5 v l6),command
+W257,8,I wanted to see articles on National Insurance ,TNIN851,"Update(?, l7)",statement
+W257,9,Show me articles related to SARS-CoV-2 instead of COVID-19 ,TNIN904,"Update(l1, l8)",command
+W257,12,show me articles about flu.,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W257,13,show me articles except COVID-19.,TNIN1102,Create(neg(l1)),command
+W258,2,Could you get me all news articles on the COVID-19/ Coronavirus disease?,TNIN550,Create(l1),question
+W258,3,Could you only show me results that are about a vaccination?,TNIN597,Create(l2),question
+W258,4,Could you also show me results that are about a treatment?,TNIN652,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",question
+W258,5,Could show show me all results that  do not include vaccination or treatment?,TNIN1135,"Update(l2 v l3, neg(l2) v neg(l3))",question
+W258,6,"Could you show me only results that either have NCD, NI, or WHO in the headline",TNIN721,Create(l4 v l5 v l6),question
+W258,7,Do not show me results about 'North Ireland',TNIN788,"Update(l5, ?),Update(l5, neg(l5))",command
+W258,8,Also show me results that have National Insurance in the headline,TNIN846,"Update(?, l7)",command
+W258,9,Show me results that meet the criteria above for SARS-CoV-2 instead of COVID-19,TNIN913,"Update(l1, l8)",command
+W258,10,Could you show me the search criteria for these results?,TNIN952,Read(Q10),question
+W258,12,Could you show me a new list that is about flu?,TNIN1039,"Update(l8 ^ l9, l10)",question
+W258,13,Could you only show me results that are not about COVID-19?,TNIN1095,Create(neg(l1)),question
+W259,2,All news articles on the COVID-19,TNIN547,Create(l1),command
+W259,3,just the news articles that are about a vaccination,TNIN603,"Create(l2),Update(l1, l2)",command
+W259,4,news articles about treatment,TNIN653,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l1 ^ l2, l3)",command
+W259,5,All news articles that are not about vaccination or treatment,TNIN1132,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W259,6,just the news articles with one of the following headline: NCD or NI or WHO,TNIN727,Create(l4 v l5 v l6),command
+W259,7,NI is not North Ireland. do you get it?,TNIN784,"Update(l5, ?)",statement
+W259,8,I mean that as National Insurance,TNIN849,"Update(?, l7)",statement
+W259,9,news articles about SARS-CoV-2 instead of COVID-19 with previous headline,TNIN909,"Update(l1, l8)",command
+W259,12,news articles about flu,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W259,13,just the news articles that are not about COVID-19,TNIN1092,Create(neg(l1)),command
+W260,2,list me some articles on COVID-19,TNIN551,Create(l1),command
+W260,5,remove artcles related to vaccination or treatment,TNIN1136,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W260,6,list articles with headline NCD or NI or WHO,TNIN725,Create(l4 v l5 v l6),command
+W260,8,I mean National Insurance,TNIN850,"Update(?, l7)",statement
+W260,9,"Hey, now change my main topic to SARS-CoV-2 instead of COVID-19",TNIN905,"Update(l1, l8)",command
+W260,11,change list to contain economy related articles ignoring the previous headlines I mentioned,TNIN990,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W260,13,remove articles related to COVID-19,TNIN1098,Create(neg(l1)),command
+W261,2,articles on Covid-19,TNIN547,Create(l1),command
+W261,5,articles not about vaccination or treatment,TNIN1132,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W261,6,include headline NCD or NI or WHO,TNIN723,Create(l4 v l5 v l6),command
+W261,7,NI not refers to North Ireland,TNIN787,"Update(l5, ?)",command
+W261,8,National Insurance,TNIN845,"Update(?, l7)",command
+W261,9,articles about SARS-CoV-2 and not about COVID-19,TNIN908,"Update(l1, l8)",command
+W261,10,repeat my previous command,TNIN955,Read(Q10),command
+W261,12,article only about flu,TNIN1044,Create(l10),command
+W261,13,not include COVID-19,TNIN1099,Create(neg(l1)),command
+W262,2,Tell me news articles about COVID-19,TNIN549,Create(l1),command
+W262,4,Add the articles about its treatment to the previous list,TNIN654,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W262,5,delete the articles about vaccination or treatment,TNIN1136,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W262,6,"headlines having the terms like NCD.NI,WHO",TNIN723,Create(l4 v l5 v l6),command
+W262,7,not North Ireland,TNIN795,"Update(l5, ?),Update(l5, neg(l5))",command
+W262,8,National Insurance,TNIN845,"Update(?, l7)",command
+W262,9,add the news articles about SARS-CoV-2 instead of COVID-19,TNIN904,"Update(l1, l8)",command
+W262,12,list the news articles about flu,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W262,13,hide the articles about COVID-19,TNIN1098,Create(neg(l1)),command
+W263,2,a list of news articles about COVID-19,TNIN548,Create(l1),command
+W263,3,a list of news articles about vaccination,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W263,4,Kindly change the list for the treatment,TNIN658,"Update(l1 ^ l2, l3)",command
+W263,6,change the news article headline that contain WHO or NCD or NI,TNIN724,Create(l4 v l5 v l6),command
+W263,7,I didn't mean NI as North Ireland,TNIN792,"Update(l5, ?)",statement
+W263,8,NI for National Insurance,TNIN844,"Update(?, l7)",command
+W263,9,Kindly change the news article list to about SARS-CoV-2 instead of COVID-19 ,TNIN905,"Update(l1, l8)",command
+W263,10,What is my previous message?,TNIN957,Read(Q10),question
+W263,11,"Kindly change the list that contains economy related instead of having one of these,NCH, NI or WHO in the headline",TNIN990,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W263,12,Kindly give me the list about flu,TNIN1036,"Update(l8 ^ l9, l10),Create(l10)",command
+W263,13,Give me the list as I asked before but that is not about COVID-19,TNIN1093,Create(neg(l1)),command
+W264,2,news about COVID-19 ,TNIN547,Create(l1),command
+W264,3,News about vaccination for current disease,TNIN598,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W264,5,what is the update on current disease without telling about vaccination or treatment,TNIN1139,"Update(l2 v l3, neg(l2) v neg(l3))",question
+W264,6,"Headlines for NCD, NI or WHO",TNIN723,Create(l4 v l5 v l6),command
+W264,7,NI news and not North Ireland,TNIN795,"Update(l5, ?),Update(l5, neg(l5))",command
+W264,8,National Insurance,TNIN845,"Update(?, l7)",command
+W264,9,news about SARS-CoV-2 and not COVID-19 ,TNIN908,"Update(l1, l8)",command
+W264,12,current update about flu,TNIN1040,"Update(l8 ^ l9, l10),Create(l10)",command
+W265,2,Tell me news about COVID-19,TNUS553,Create(l1),command
+W265,3,Show me information about vaccinations,TNUS608,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W265,4,I would like to see articles about treatments,TNUS671,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l1 ^ l2, l3)",statement
+W265,5,show me articles that are not about vaccinations or treatment,TNUS1145,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W265,6,"show me articles with NCD, or NI, or WHO in the headline",TNUS730,Create(l4 v l5 v l6),command
+W265,7,show me articles not about North Ireland,TNUS798,"Update(l5, ?),Update(l5, neg(l5))",command
+W265,8,I would like to she articles about National Insurance,TNUS862,"Update(?, l7)",statement
+W265,9,I would like to see articles about SARS-Cov-2 and not COVID-19,TNUS917,"Update(l1, l8)",statement
+W265,12,I would like to see articles about the flu,TNUS1050,"Update(l8 ^ l9, l10),Create(l10)",statement
+W265,13,I would like to see articles not about COVID-19,TNUS1109,Create(neg(l1)),statement
+W266,2,Can I get a list of all the news articles on COVID-19?,TNUS555,Create(l1),question
+W266,3,Can I get news articles related to vaccination?,TNUS606,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",question
+W266,4,Can I also get articles on treatment as well?,TNUS662,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",question
+W266,5,also get articles that are not related to vaccination or treatment,TNUS692,Delete(l2 v l3),command
+W266,6,"Can I get articles that include either NCD, NI, or WHO in the headline?",TNUS734,Create(l4 v l5 v l6),question
+W266,7,Could you eliminate the articles regarding North Ireland?,TNUS807,"Update(l5, ?),Update(l5, neg(l5))",question
+W266,8,Could you add articles related to National Insurance?,TNUS858,"Update(?, l7)",question
+W266,11,Can I change to finding articles about the economy instead of the headline from the previous lists?,TNUS993,"Update(f1:(l4 ^ l7 ^ l6), l9)",question
+W266,12,Can I have articles related to the flu?,TNUS1046,"Update(l8 ^ l9, l10),Create(l10)",question
+W266,13,Can you eliminate any articles related to COVID-19?,TNUS1106,Create(neg(l1)),question
+W267,2,I want a list of news articles about the COVID-19,TNUS556,Create(l1),statement
+W267,3,I would like to see only articles about a vaccination.,TNUS613,"Create(l2),Update(l1, l2)",statement
+W267,4,I want to see news articles about either vaccination or treatment.,TNUS669,"Update(l2, l2 v l3)",statement
+W267,5,I want more news articles that are not about vaccination or treatment.,TNUS1141,"Update(l2 v l3, neg(l2) v neg(l3))",statement
+W267,6,show me news article with headlines related to NCD or NI or WHO.,TNUS731,Create(l4 v l5 v l6),command
+W267,7,I do not mean North Ireland by NI,TNUS810,"Update(l5, ?)",statement
+W267,8,I meant National Insurance by NI.,TNUS860,"Update(?, l7)",statement
+W267,9,I want news about SARS-CoV-2 instead of COVID-19,TNUS917,"Update(l1, l8)",statement
+W267,10,Please could you repeat the previous direction?,TNUS961,Read(Q10),question
+W267,11,"I want a list of different articles related to the previous ones that are about the economy without any of NCD, NI, or WHO in the headline.",TNUS1161,"Update(f1:(l4 ^ l7 ^ l6), l9 ^ neg(f1:(l4 ^ l7 ^ l6)))",statement
+W267,12,I want the list to contain only news articles about flu,TNUS1052,"Update(l8 ^ l9, l10)",statement
+W267,13,I want the list to contain articles about the previous topic that are not about COVID-19,TNUS1109,Create(neg(l1)),statement
+W268,2,give latest news on covid19,TNUS553,Create(l1),command
+W268,3,show me only information on vaccination,TNUS615,"Create(l2),Update(l1, l2)",command
+W268,4,I need information about treatments also,TNUS670,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",statement
+W268,6,"headline containing WHO,NCD and NI latest information",TNUS738,Create(l4 v l5 v l6),command
+W268,7,NI is not North ireland,TNUS800,"Update(l5, ?)",statement
+W268,8,Headlines for National Insurance,TNUS859,"Update(?, l7)",command
+W268,9,Give me news on SARS-COV2 not COVID-19,TNUS914,"Update(l1, l8)",command
+W268,12,Give information about flu,TNUS1045,"Update(l8 ^ l9, l10),Create(l10)",command
+W268,13,Give me information on previously mentioned disease excluding COVID-19,TNUS1108,Create(neg(l1)),command
+W269,2,Find me COVID-19 articles.,TNUS554,Create(l1),command
+W269,3,Show me only some articles about the virus vaccination.,TNUS615,"Create(l2),Update(l1, l2)",command
+W269,4,Show more more articles about the treatment of the virus.,TNUS661,"Update(l2, l2 v l3),Update(l1 ^ l2, l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W269,7,NI does not mean North Ireland.,TNUS804,"Update(l5, ?)",statement
+W269,8,NI actually means National Insurance.,TNUS853,"Update(?, l7)",statement
+W269,9,I want articles about SARS-CoV-2 and not COVID-19,TNUS917,"Update(l1, l8)",statement
+W269,12,Show me different articles about the flu.,TNUS1045,"Update(l8 ^ l9, l10),Create(l10)",command
+W269,13,I want only articles about the virus i just told you and not COVID-19.,TNUS1109,Create(neg(l1)),statement
+W270,2,find articles on covid-19,TNUS553,Create(l1),command
+W270,3,find articles about a virus vaccinations,TNUS608,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W270,4,only show articles about treatments and vaccination,TNUS673,"Update(l2, l2 ^ l3)",command
+W270,5,show articles about coronavirus other than those about vaccinations or treatments,TNUS691,Delete(l2 v l3),command
+W270,6,find articles about the virus with WHO or NCD or NI in the headline,TNUS730,Create(l4 v l5 v l6),command
+W270,7,NI is not north ireland,TNUS800,"Update(l5, ?)",statement
+W270,8,ni is national insurance,TNUS854,"Update(?, l7)",statement
+W270,9,show articles about sars-cov-2 instead of covid-19,TNUS914,"Update(l1, l8)",command
+W270,10,what was my last request,TNUS964,Read(Q10),question
+W270,12,show a list of articles about the flu,TNUS1045,"Update(l8 ^ l9, l10),Create(l10)",command
+W270,13,show articles that aren't about covid-19,TNUS1110,Create(neg(l1)),command
+W271,2,Please provide COVID-19 articles,TNUS554,Create(l1),command
+W271,3,Can you just show me the ones that discuss vaccinations?,TNUS605,Create(l2),question
+W271,4,Can you also include ones that discuss treatment.,TNUS667,"Update(l2, l2 v l3)",question
+W271,5,Actually also add the articles not about treatment or vaccinations.,TNUS692,Delete(l2 v l3),command
+W271,6,"But only include articles with NCD, or NI or WHO in the headline",TNUS730,Create(l4 v l5 v l6),command
+W271,7,I need North IRELAND ARTICLES REMOVED,TNUS811,"Update(l5, ?),Update(l5, neg(l5))",statement
+W271,8,National Insurance articles,TNUS856,"Update(?, l7)",command
+W271,9,"instead of COVID-19, also include SARS-Cov-2 articles",TNUS919,"Update(l1, l8)",command
+W271,12,Now only articles about the flu,TNUS1054,"Update(l8 ^ l9, l10)",command
+W271,13,And not about covid-19,TNUS1103,Create(neg(l1)),command
+W272,2,Search for COVID-19 articles,TNUS554,Create(l1),command
+W272,3,Just the vaccination news articles,TNUS614,"Create(l2),Update(l1, l2)",command
+W272,4,look up treatment articles,TNUS672,"Update(l1 ^ l2, l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3),Update(l2, l2 v l3)",command
+W272,6,"change list to just NCD, NI, WHO headline news articles",TNUS735,Create(l4 v l5 v l6),command
+W272,7,Exclude North Ireland,TNUS808,"Update(l5, ?),Update(l5, neg(l5))",command
+W272,8,National Insurance,TNUS856,"Update(?, l7)",command
+W272,10,What was the last search query?,TNUS965,Read(Q10),question
+W272,12,Search flu news articles,TNUS1057,"Update(l8 ^ l9, l10),Create(l10)",command
+W272,13,exclude COVID-19,TNUS1104,Create(neg(l1)),command
+W273,2,news articles about COVID-19,TNUS552,Create(l1),command
+W273,3,news articles about vaccination,TNUS608,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W273,4,news articles about treatments,TNUS661,"Update(l2, l2 v l3),Update(l1 ^ l2, l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W273,5,news articles not about vaccination or treatment,TNUS1145,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W273,6,news articles with headlines NCD or NI or WHO,TNUS742,Create(l4 v l5 v l6),command
+W273,7,news articles not about North Ireland,TNUS798,"Update(l5, ?),Update(l5, neg(l5))",command
+W273,8,news articles about National Insurance,TNUS857,"Update(?, l7)",command
+W273,9,news articles about SARS-CoV-2 instead of COVID-19,TNUS921,"Update(l1, l8)",command
+W273,12,news articles about flu,TNUS1053,"Update(l8 ^ l9, l10),Create(l10)",command
+W273,13,news articles not about COVID-19,TNUS1103,Create(neg(l1)),command
+W274,2,Give me the latest COVID-19 news,TNUS554,Create(l1),command
+W274,6,"Show me articles with WHO, NI or NCD in the headline",TNUS730,Create(l4 v l5 v l6),command
+W274,7,North Ireland is not what I meant by NI,TNUS803,"Update(l5, ?)",statement
+W274,8,NI is an abbreviation for National Insurance.,TNUS855,"Update(?, l7)",statement
+W274,9,"Instead of COVID-19 articles, show me SARS-CoV-2 articles",TNUS919,"Update(l1, l8)",command
+W274,10,Please go back to my previous search,TNUS959,Read(Q10),command
+W274,12,Just show me articles about the flu,TNUS1054,"Update(l8 ^ l9, l10)",command
+W274,13,The articles should not be about COVID-19,TNUS1111,Create(neg(l1)),command
+W275,2,Get me all news articles about COVID-19.,TNUS553,Create(l1),command
+W275,3,Change that list to include only articles about a vaccination.,TNUS611,"Create(l2),Update(l1, l2)",command
+W275,4,Change the list to include articles about treatment.,TNUS668,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W275,6,Change the list to include only headlines that include NCD or NI or WHO.,TNUS737,Create(l4 v l5 v l6),command
+W275,7,Change the list to eliminate articles about North Ireland.,TNUS806,"Update(l5, ?),Update(l5, neg(l5))",command
+W275,8,National Insurance.,TNUS856,"Update(?, l7)",command
+W275,9,Change the list to find articles on SARS-CoV-2 instead of COVID-19.,TNUS915,"Update(l1, l8)",command
+W275,10,Repeat my previous request.,TNUS959,Read(Q10),command
+W275,11,Remove my earlier headline requests and change the list to include only articles about the economy.,TNUS996,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W275,12,Delete the earlier list and get me all news articles about the flu.,TNUS1047,"Update(l8 ^ l9, l10)",command
+W275,13,Change the list to remove any articles about COVID-19.,TNUS1107,Create(neg(l1)),command
+W276,2,Please could you help me the news articles about COVID-19?,TNUS557,Create(l1),question
+W276,5,"could you add more details to your list relating to the disease, its vaccinations and treatments?",TNUS693,Delete(l2 v l3),question
+W276,6,"Also adjust your list by including NCD, NI, and WHO headlines",TNUS732,Create(l4 v l5 v l6),command
+W276,7,The interpretation you had for NI as north ireland is not what i actually meant,TNUS812,"Update(l5, ?)",statement
+W276,8,What i had in mind initially was National insurance.,TNUS863,"Update(?, l7)",statement
+W276,9,you would have to replace COVID-19 with SARS-CoV-2,TNUS919,"Update(l1, l8)",statement
+W276,12,"Now i want this article to be about flu not COVID-19, you will have to edit your work|",TNUS1055,"Update(l8 ^ l9, l10),Create(l10)",statement
+W276,13,The content that you are to create should contain things relating to the new suggested illness and not to COVID-19,TNUS1112,Create(neg(l1)),statement
+W277,2,Please retrieve any and  all COVID-19 articles you can for me.,TNUS558,Create(l1),command
+W277,3,I only would like to see articles that contain information about a vaccination.,TNUS612,"Create(l2),Update(l1, l2)",statement
+W277,4,Please also show me articles pertaining to a treatment.,TNUS664,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W277,5,I would like to see more articles that are not about vaccination or treatment.,TNUS1141,"Update(l2 v l3, neg(l2) v neg(l3))",statement
+W277,6,"I would like to see articles and those where the headline has NCD, NI, or WHO.",TNUS741,Create(l4 v l5 v l6),statement
+W277,7,NI does not stand for North Ireland.,TNUS804,"Update(l5, ?)",statement
+W277,8,National Insurance,TNUS856,"Update(?, l7)",command
+W277,9,"Instead of COVID-19, I would now like to view articles about SARS-CoV-2.",TNUS920,"Update(l1, l8)",statement
+W277,10,Please show me my previous searches.,TNUS959,Read(Q10),command
+W277,12,Disregard all previous searches and only provide search results for the flu.,TNUS1048,"Update(l8 ^ l9, l10)",command
+W277,13,Please show articles which do not contain information about COVID-19.,TNUS1110,Create(neg(l1)),command
+W278,2,I need all news articles on COVID-19,TNUS556,Create(l1),statement
+W278,3,all news articles about vaccination,TNUS608,"Create(l2),Update(l1, l1 v l2),Update(l1, l2)",command
+W278,4,also include treatments,TNUS664,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W278,5,I need all articles that are not about vaccination or treatment,TNUS1141,"Update(l2 v l3, neg(l2) v neg(l3))",statement
+W278,6,"I need the headline to include either NCD, NI, WHO",TNUS740,Create(l4 v l5 v l6),statement
+W278,7,NI is not North Ireland,TNUS800,"Update(l5, ?)",statement
+W278,8,NI means National Insurance,TNUS853,"Update(?, l7)",statement
+W278,9,Looking for articles on Sars-CoV-2 instead of COVID-19,TNUS914,"Update(l1, l8)",command
+W278,10,What was my previous search?,TNUS964,Read(Q10),question
+W278,11,Instead of the headline. I am looking for articles about the economy,TNUS994,"Update(f1:(l4 ^ l7 ^ l6), l9)",statement
+W278,12,I want to search about the flu,TNUS1050,"Update(l8 ^ l9, l10),Create(l10)",statement
+W278,13,do not include anything about COVID-19,TNUS1104,Create(neg(l1)),command
+W279,3,Only provide articles about vaccination,TNUS607,"Create(l2),Update(l1, l2)",command
+W279,4,also includes articles about treatment,TNUS664,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W279,5,remove any articles that are about vaccination or treatment,TNUS1143,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W279,6,"Please include all articles that have the headline of either NCD, NI, or WHO.",TNUS731,Create(l4 v l5 v l6),command
+W279,7,"North Ireland is not what I had in mind, I had something else in mind",TNUS802,"Update(l5, ?)",statement
+W279,8,I actually meant National Insurance,TNUS861,"Update(?, l7)",statement
+W279,9,Please change the list to contain different articles about SARS-CoV-2 instead of COVID-19,TNUS915,"Update(l1, l8)",command
+W279,10,Can you please confirm the information I provided earlier?,TNUS960,Read(Q10),question
+W279,11,"Please include only articles about the economy, but remove the filter about headlines containing certain words.",TNUS995,"Update(f1:(l4 ^ l7 ^ l6), l9)",command
+W279,12,Please perform a new search that has articles about the flu,TNUS1056,"Update(l8 ^ l9, l10)",command
+W280,2,news articles about COVID-19,TNUS552,Create(l1),command
+W280,5,all news without vaccination or treatment,TNUS1140,"Update(l2 v l3, neg(l2) v neg(l3))",command
+W280,6,"headline words include NCD, NI, or WHO",TNUS738,Create(l4 v l5 v l6),command
+W280,7,North Ireland is incorrect,TNUS799,"Update(l5, ?)",statement
+W280,8,NI is National Insurance,TNUS854,"Update(?, l7)",statement
+W280,9,"news articles about SARS-CoV-2 only, omit COVID-19",TNUS921,"Update(l1, l8)",command
+W280,10,what did I previously ask for,TNUS963,Read(Q10),question
+W280,12,only articles about flu ,TNUS1054,"Update(l8 ^ l9, l10)",command
+W280,13,do not include COVID-19,TNUS1104,Create(neg(l1)),command
+W281,2,Get me all the news on the covid-19 ,TNUS553,Create(l1),command
+W281,3,Also include any articles thadiscuss vaccination,TNUS609,"Update(l1, l1 v l2)",command
+W281,4,add articles that include treatments,TNUS666,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W281,5,I need more articles but not about vaccinations or treatments,TNUS1141,"Update(l2 v l3, neg(l2) v neg(l3))",statement
+W281,6,"I need articles only include NCD, NI or WHO in the headline",TNUS739,Create(l4 v l5 v l6),statement
+W281,7,I dont mean North Ireland,TNUS809,"Update(l5, ?)",statement
+W281,8,I meant National Insurance,TNUS861,"Update(?, l7)",statement
+W281,9,I need different articles on SARS-CoV-2 not on COVID-19,TNUS917,"Update(l1, l8)",statement
+W281,10,What were the previous request,TNUS964,Read(Q10),question
+W281,12,Give me articles about the flu,TNUS1045,"Update(l8 ^ l9, l10),Create(l10)",command
+W281,13,But include them to not be about COVID-19,TNUS1105,Create(neg(l1)),command
+W282,2,Can i get news articles about Covid-19 ,TNUS555,Create(l1),question
+W282,3,Could you only have the articles that are about the vaccination,TNUS605,Create(l2),question
+W282,4,Now show me some more articles that talk about treatment too,TNUS663,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W282,5,Now I don't want to see the news articles about vaccination or treatment anymore,TNUS1142,"Update(l2 v l3, neg(l2) v neg(l3))",statement
+W282,6,"I just want to see the articles that have WHO, NCD, or NI in the headline",TNUS739,Create(l4 v l5 v l6),statement
+W282,7,North Ireland is not the 'NI' i was looking for,TNUS801,"Update(l5, ?)",statement
+W282,8,I actually meant National Insurance,TNUS861,"Update(?, l7)",statement
+W282,9,I want the articles about COVID-19 to be about SARS-CoV-2 now with the same headlines,TNUS918,"Update(l1, l8)",statement
+W282,10,What articles did i ask for previously,TNUS962,Read(Q10),question
+W282,12,Do not consider anything I said earlier and change the articles to be about the flu,TNUS1049,"Update(l8 ^ l9, l10)",command
+W282,13,Exclude all articles about COVID-19,TNUS1104,Create(neg(l1)),command
+W283,2,Give me articles on COVID-19,TNUS553,Create(l1),command
+W283,3,Just show me the articles on vaccination,TNUS607,"Create(l2),Update(l1, l2)",command
+W283,4,include articles on treatment as well,TNUS663,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W283,5,include articles that don't include vaccination or treatment too.,TNUS694,Delete(l2 v l3),command
+W283,6,"Only include articles that have NCD, NI, or WHO in the headline",TNUS730,Create(l4 v l5 v l6),command
+W283,7,By NI I didn't mean North Ireland,TNUS805,"Update(l5, ?)",statement
+W283,8,I meant National Insurance.,TNUS861,"Update(?, l7)",statement
+W283,9,"Give me articles about SARS-CoV-2 rather than COVID-19, they should meet the previous criteria.",TNUS916,"Update(l1, l8)",command
+W283,10,What was the previous search?,TNUS964,Read(Q10),question
+W283,12,"I want a completely new search, give me news articles about the flu.",TNUS1051,"Update(l8 ^ l9, l10)",statement
+W283,13,I want news articles that aren't about COVID-19.,TNUS1109,Create(neg(l1)),statement
+W284,2,Get me all articles on Covid-19,TNUS553,Create(l1),command
+W284,3,Show me only those about vaccination,TNUS616,Create(l2),command
+W284,4,Also include articles about treatments,TNUS664,"Update(l2, l2 v l3),Update(l1 ^ l2, (l1 ^ l2) ^ l3)",command
+W284,5,Remove articles about vaccination and treatments,TNUS1144,"Update(l2 v l3, neg(l2) ^ neg(l3))",command
+W284,6,"Show me articles about NCD, NI or WHO in the headline",TNUS730,Create(l4 v l5 v l6),command
+W284,7,NI is not North Ireland,TNUS800,"Update(l5, ?)",statement
+W284,8,NI stands for National Insurance,TNUS853,"Update(?, l7)",statement
+W284,9,Show me articles about SARS-CoV-2 insteadof Covid-19,TNUS914,"Update(l1, l8)",command
+W284,12,show me articles about the flu,TNUS1045,"Update(l8 ^ l9, l10),Create(l10)",command
+W284,13,That are not about Covid-19,TNUS1103,Create(neg(l1)),command
