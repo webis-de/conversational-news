@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Listenability Tools</title>
+<meta name="description" content="Demo interface for listenability-tools">
+</head>
+<body> 
+<h1>Listenability Tools</h1>
+<textarea id="text" style="width:100%;height:30ex"></textarea>
+<div><button type="button" onclick="send()">Analyze</button></div>
+<ul id="scoredUnits"></ul>
+<script src="js/uima-client.js"></script>
+<script src="js/uima-scores.js"></script>
+<script>
+const client = new UimaClient(window.location.protocol + "//" + window.location.host + "/analyze");
+
+function elementToString(uimaDocument, element) {
+  return element.nodeName
+    + "(" + UimaDocument.getBound(element, "begin") + "," + UimaDocument.getBound(element, "end") + "): "
+    + uimaDocument.getText(element);
+}
+
+function addScoredUnit(uimaDocument, scoredUnit, parentElement) {
+  const scoredUnitElement = document.createElement("li");
+  scoredUnitElement.innerText = elementToString(uimaDocument, scoredUnit.unit);
+  addScores(uimaDocument, scoredUnit.scores, scoredUnitElement);
+  addSuggestions(uimaDocument, scoredUnit.suggestions, scoredUnitElement);
+  parentElement.appendChild(scoredUnitElement);
+}
+
+function addScores(uimaDocument, scores, parentElement) {
+  if (scores.length > 0) {
+    const scoresElement = document.createElement("ul");
+    for (let s = 0; s < scores.length; ++s) {
+      const score = scores[s];
+      addScore(uimaDocument, score, scoresElement);
+    }
+    parentElement.appendChild(scoresElement);
+  }
+}
+
+function addScore(uimaDocument, score, parentElement) {
+  const scoreElement = document.createElement("li");
+  scoreElement.innerText = "Score(" + score.name + "): " + score.value;
+  addExplanations(uimaDocument, score.explanations, scoreElement);
+  parentElement.appendChild(scoreElement);
+}
+
+function addSuggestions(uimaDocument, suggestions, parentElement) {
+  if (suggestions.length > 0) {
+    const suggestionsElement = document.createElement("ul");
+    for (let s = 0; s < suggestions.length; ++s) {
+      const suggestion = suggestions[s];
+      addSuggestion(uimaDocument, suggestion, suggestionsElement);
+    }
+    parentElement.appendChild(suggestionsElement);
+  }
+}
+
+function addSuggestion(uimaDocument, suggestion, parentElement) {
+  const suggestionElement = document.createElement("li");
+  suggestionElement.innerText = "Suggestion: " + suggestion.text;
+  addScores(uimaDocument, suggestion.scores, suggestionElement);
+  parentElement.appendChild(suggestionElement);
+}
+
+function addExplanations(uimaDocument, explanations, parentElement) {
+  if (explanations.length > 0) {
+    const explanationsElement = document.createElement("ul");
+    for (let e = 0; e < explanations.length; ++e) {
+      const explanation = explanations[e];
+      addExplanation(uimaDocument, explanation, explanationsElement);
+    }
+    parentElement.appendChild(explanationsElement);
+  }
+}
+
+function addExplanation(uimaDocument, explanation, parentElement) {
+  const explanationElement = document.createElement("li");
+  explanationElement.innerText = "Explanation(" + explanation.key + "):"
+    + (explanation.value !== null ? " " + explanation.value : "")
+    + (explanation.reference !== null ? " " + elementToString(uimaDocument, explanation.reference) : "");
+  parentElement.appendChild(explanationElement);
+}
+
+
+function send() {
+  client.analyze(
+      document.getElementById("text").value,
+      (key, uimaDocument) => {
+        const scoredUnitsElement = document.getElementById("scoredUnits");
+        scoredUnitsElement.innerHTML = "";
+
+        const scoredUnits = getScoredUnits(uimaDocument);
+        for (let u = 0; u < scoredUnits.length; ++u) {
+          const scoredUnit = scoredUnits[u];
+          addScoredUnit(uimaDocument, scoredUnit, scoredUnitsElement);
+        }
+      });
+}
+</script>
+</body>
+</html>

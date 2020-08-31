@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+              
+  
+  
+  
+  
+  
+  <name>ListenabilityTypeSystem</name>
+              
+  
+  
+  
+  
+  
+  <description>Type system for all annotation types related to listenability.</description>
+              
+  
+  
+  
+  
+  
+  <version>1.0.0</version>
+              
+  
+  
+  
+  
+  
+  <vendor>webis.de</vendor>
+              
+  
+  
+  
+  
+  
+  <imports>
+                            
+    
+    
+    
+    
+    
+    <import name="de.webis.writing.types.WritingAssistanceTypeSystem"/>
+                        
+    
+    
+    
+  
+  
+  </imports>
+              
+  
+  
+  
+  
+  
+<types>
+    <typeDescription>
+      <name>de.webis.writing.types.DiscourseMarkers</name>
+      <description/>
+      <supertypeName>de.aitools.commons.uima.supertype.Unit</supertypeName>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

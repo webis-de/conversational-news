@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <name>DeltaTypeSystem</name>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <description>Type system for all annotation types related to modifications of the sofa text.</description>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <version>1.0.0</version>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <vendor>webis.de</vendor>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <imports>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <import name="de.aitools.commons.uima.core.CoreTypeSystem"/>
+                                        
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  </imports>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <types>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <typeDescription>
+                  
+      
+      <name>de.aitools.commons.uima.delta.types.Delta</name>
+                  
+      
+      <description>Indicates a unit of text that has been modified.</description>
+                  
+      
+      <supertypeName>de.aitools.commons.uima.supertype.Unit</supertypeName>
+                  
+      
+      <features>
+                        
+        
+        <featureDescription>
+                              
+          
+          <name>old</name>
+                              
+          
+          <description>The text that has been previously at the place of this unit.</description>
+                              
+          
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+                            
+        
+        </featureDescription>
+                      
+      
+      </features>
+                
+    
+    </typeDescription>
+            
+    
+    <typeDescription>
+                  
+      
+      <name>de.aitools.commons.uima.delta.types.DeltaDocumentInformation</name>
+                  
+      
+      <description>Global information that pertains to modifications to the document.</description>
+                  
+      
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+                  
+      
+      <features>
+                        
+        
+        <featureDescription>
+                              
+          
+          <name>state</name>
+                              
+          
+          <description>A string that identifies the current state of the document.</description>
+                              
+          
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+                            
+        
+        </featureDescription>
+                      
+      
+      </features>
+                
+    
+    </typeDescription>
+      
+  </types>
+                    
+
+
+
+
+
+
+
+
+
+</typeSystemDescription>

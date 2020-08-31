@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+                  
+  
+  
+  
+  
+  
+  
+  
+  <name>WritingAssistanceTypeSystem</name>
+                  
+  
+  
+  
+  
+  
+  
+  
+  <description>Type system for all annotation types related to writing assistance.</description>
+                  
+  
+  
+  
+  
+  
+  
+  
+  <version>1.0.0</version>
+                  
+  
+  
+  
+  
+  
+  
+  
+  <vendor>webis.de</vendor>
+                  
+  
+  
+  
+  
+  
+  
+  
+  <imports>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <import name="de.aitools.commons.uima.delta.types.DeltaTypeSystem"/>
+                                
+    
+    
+    
+  
+  
+  
+  
+  </imports>
+                  
+  
+  
+  
+  
+  
+  
+  
+  <types>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <typeDescription>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <name>de.webis.writing.types.ScoredUnit</name>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <description>One or more scores have been assigned to this unit by one or more measures. Suggestions may exist of how the unit could be replaced.</description>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <features>
+                                                                        
+        
+        
+        
+        
+        
+        
+        
+        <featureDescription>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <name>scores</name>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <description>The assigned scores  (of type de.webis.writing.types.Score).</description>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                                                                                          
+          
+          
+        
+          
+          
+          
+          
+          <elementType>de.webis.writing.types.Score</elementType>
+                                                
+          
+          
+          
+          <multipleReferencesAllowed>true</multipleReferencesAllowed>
+                                      
+        
+        
+        </featureDescription>
+                                                                        
+        
+        
+        
+        
+        
+        
+        
+        <featureDescription>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <name>suggestions</name>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <description>The suggestions (of type de.webis.writing.types.Suggestion), which could be synonyms (for word or phrase units) or paraphrases (for phrase or longer units).</description>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                                                                                          
+          
+          
+        
+          
+          
+          
+          
+          <elementType>de.webis.writing.types.Suggestion</elementType>
+                                                
+          
+          
+          
+          <multipleReferencesAllowed>true</multipleReferencesAllowed>
+                                      
+        
+        
+        </featureDescription>
+                                                                      
+      
+      
+      
+        
+        
+        
+        
+        <featureDescription>
+                                                            
+          
+          
+          
+          
+          <name>unit</name>
+                                                            
+          
+          
+          
+          
+          <description>The Unit that this ScoredUnit refers to.</description>
+                                                            
+          
+          
+          
+          
+          <rangeTypeName>de.aitools.commons.uima.supertype.Unit</rangeTypeName>
+                                                          
+        
+        
+        
+        
+        </featureDescription>
+                                      
+      
+      
+      
+      </features>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    </typeDescription>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <typeDescription>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <name>de.webis.writing.types.Suggestion</name>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <description>A suggestion to replace the original unit with.</description>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <supertypeName>uima.cas.TOP</supertypeName>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <features>
+                                                                        
+        
+        
+        
+        
+        
+        
+        
+        <featureDescription>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <name>text</name>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <description>The text of the suggestion.</description>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        </featureDescription>
+                                                                        
+        
+        
+        
+        
+        
+        
+        
+        <featureDescription>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <name>scores</name>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <description>The scores (of type de.webis.writing.types.Score) of this suggestion.</description>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                                                                                          
+          
+          
+        
+          
+          
+          
+          
+          <elementType>de.webis.writing.types.Score</elementType>
+                                                
+          
+          
+          
+          <multipleReferencesAllowed>true</multipleReferencesAllowed>
+                                      
+        
+        
+        </featureDescription>
+                                                                      
+      
+      
+      
+      
+      
+      
+      
+      </features>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    </typeDescription>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <typeDescription>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <name>de.webis.writing.types.Score</name>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <description>A score assigned to some text by some measure.</description>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <supertypeName>uima.cas.TOP</supertypeName>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <features>
+                                                                        
+        
+        
+        
+        
+        
+        
+        
+        <featureDescription>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <name>name</name>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <description>The name of the measure that calculated this score for the text.</description>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        </featureDescription>
+                                                                        
+        
+        
+        
+        
+        
+        
+        
+        <featureDescription>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <name>value</name>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <description>The value that the measure calculated for the text. The value should usually be between 0 (= worst possible) and 1 (= everything is fine). The score is used to hint at problems, so values above 1 are usually avoided.</description>
+                                                                                          
+          
+          
+          
+          
+          
+          
+          
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        </featureDescription>
+                                                                      
+      
+      
+      
+        
+        
+        
+        
+        <featureDescription>
+                                                            
+          
+          
+          
+          
+          <name>explanations</name>
+                                                            
+          
+          
+          
+          
+          <description>The explanations for this score.</description>
+                                                            
+          
+          
+          
+          
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                                                            
+          
+          
+          
+          
+          <elementType>de.webis.writing.types.Explanation</elementType>
+                                                          
+        
+          
+          
+          
+          <multipleReferencesAllowed>true</multipleReferencesAllowed>
+                                      
+        
+        
+        </featureDescription>
+                                      
+      
+      
+      
+      </features>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    </typeDescription>
+                                  
+  
+  
+  
+    
+    
+    
+    
+    <typeDescription>
+                                    
+      
+      
+      
+      
+      <name>de.webis.writing.types.Explanation</name>
+                                    
+      
+      
+      
+      
+      <description>An explanation for some value or annotation. Explanations are not human-readable text but rather contain the different values (and/or references to other annotations) that are necessary to compose a human-readable explanation text in the client. An explanation is thus just a value (and/or reference) with a name (called key). Explanations can use a value to specify why or how the value and/or the reference to another annotation is an explanation.</description>
+                                    
+      
+      
+      
+      
+      <supertypeName>uima.cas.TOP</supertypeName>
+                                    
+      
+      
+      
+      
+      <features>
+                                                
+        
+        
+        
+        
+        <featureDescription>
+                                                            
+          
+          
+          
+          
+          <name>key</name>
+                                                            
+          
+          
+          
+          
+          <description>A name for the value and/or reference of this explanation. This name will be used to interprete the value (and/or reference) and differentiate between values (and/or references) when the human-readable explanation text is composed.</description>
+                                                            
+          
+          
+          
+          
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+                                                          
+        
+        
+        
+        
+        </featureDescription>
+                                                
+        
+        
+        
+        
+        <featureDescription>
+                                                            
+          
+          
+          
+          
+          <name>value</name>
+                                                            
+          
+          
+          
+          
+          <description>An optional value for this explanation.</description>
+                                                            
+          
+          
+          
+          
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+                                                          
+        
+        
+        
+        
+        </featureDescription>
+                                                
+        
+        
+        
+        
+        <featureDescription>
+                                                            
+          
+          
+          
+          
+          <name>reference</name>
+                                                            
+          
+          
+          
+          
+          <description>The optional annotation that is referenced by this explanation</description>
+                                                            
+          
+          
+          
+          
+          <rangeTypeName>uima.tcas.Annotation</rangeTypeName>
+                                                          
+        
+        
+        
+        
+        </featureDescription>
+                                              
+      
+      
+      
+      
+      </features>
+                                  
+    
+    
+    
+    
+    </typeDescription>
+                
+            
+            
+    
+    
+    <typeDescription>
+                      
+                
+                  
+      
+      
+      <name>de.webis.writing.types.DiscourseMarker</name>
+                        
+      
+      
+      
+      
+      <description>Information on the discourse marker type, if it is a phrase and the whole discourse marker</description>
+                        
+      
+      
+      
+      
+      <supertypeName>de.aitools.commons.uima.supertype.Unit</supertypeName>
+            
+      
+      
+      
+      
+      <features>
+              
+      
+      
+      
+      	
+        <featureDescription>
+                	
+      	
+      	
+      	
+      		
+          <name>isPhrase</name>
+                		
+      		
+      		
+      		
+      		
+          <description>true if it is a discourse marker consisting of more than two words.</description>
+                		
+      		
+      		
+      		
+      		
+          <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+                		
+      		
+      		
+      		
+      	
+        </featureDescription>
+              	
+      	
+      	
+      	
+      	
+        <featureDescription>
+                		
+      		
+      		
+      		
+      		
+          <name>discourseMarker</name>
+                		
+      		
+      		
+      		
+      		
+          <description>The discourse marker as string.</description>
+                		
+      		
+      		
+      		
+      		
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+                		
+      		
+      		
+      		
+      	
+        </featureDescription>
+              	
+      	
+      	
+      	
+      
+      <featureDescription>
+          <name>markerType</name>
+          <description>The type of the discourse marker</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+            
+      
+                
+    
+    
+    </typeDescription>
+                  
+              
+  
+  
+  
+  </types>
+                
+
+
+
+
+
+
+
+</typeSystemDescription>

@@ -1,0 +1,6 @@
+!Dockerfile
+!build.sh
+*.jar
+data
+
+/service.conf

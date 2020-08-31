@@ -1,0 +1,48 @@
+// Apply plugins
+
+plugins {
+  id 'com.github.johnrengelman.shadow' version '4.0.2'
+  id 'java'
+}
+
+version = '0.1.0'
+
+
+// Basic configuration and settings for all (sub-)projects
+allprojects {
+    group = 'de.webis.conversational-search'
+    version = version
+    sourceCompatibility = 1.11
+    targetCompatibility = 1.11
+
+    // Set source file encoding
+    compileJava.options.encoding = "UTF-8"
+    compileTestJava.options.encoding = "UTF-8"
+    javadoc.options.encoding = 'UTF-8'
+
+    // Declare global dependencies
+    dependencies {
+        implementation group: 'de.webis.aitools', name: 'aitools4-commons-uima-webserver', version: '1.2.1'
+        implementation group: 'org.slf4j', name: 'slf4j-nop', version: '1.7.30'
+        implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+        implementation group: 'org.apache.commons', name: 'commons-compress', version: '1.18'
+        implementation group: 'org.apache.commons', name: 'commons-csv', version: '1.8'
+        implementation group: 'org.apache.uima', name: 'uimafit-core', version: '3.1.0'
+        implementation group: 'edu.stanford.nlp', name: 'stanford-parser', version: '3.9.2'
+        implementation group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '3.9.2'
+        implementation group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '3.9.2', classifier: 'models'
+    }
+}
+
+jar {
+  manifest {
+    attributes 'Main-Class': 'de.webis.listenability.Analyze'
+  }
+}
+
+javadoc {
+    options.tags = [ "generated", "modifiable", "ordered" ]
+}
+
+// Include Artifactory configuration
+apply from: 'artifactory.gradle'
