@@ -1,0 +1,65 @@
+Journalist Interview
+====================
+
+Date: August 21st, 2020.
+
+Preparation
+-----------
+Technical hints:
+  - You must use a current version of the Google Chrome browser
+  - The web page will ask you to use your microphone: this has a technical reason and you have to accept this request, though the web page will in fact not use your microphone
+  - Share you screen in Skype
+  - Keep a journalistic English text ready
+  - Think aloud and share your impressions
+
+We will discuss the following in our call:
+  - The web page readaloud.webis.de is a prototype of a system that should allow you to fine-tune your texts for smart speakers (Alexa, Siri, ...)
+  - Take the text you have ready: how would you change it and why?
+  - You are able to directly listen to the text as if people would hear it over their smart speaker: is this helpful for you? (note that reading the text aloud sometimes stops suddenly at the moment - just restart it if this happens)
+  - When you listen to the text, what do you listen for and which problems come to your mind?
+  - How would you like to change the voice?
+  - Always feel free to comment on whatever comes to your mind
+
+
+Study Notes
+-----------
+Participant:
+  - Between 20 - 30 years old
+  - Female
+  - Finished her study of journalism in 2017 (Master of Arts)
+
+Background knowledge (based on study programme)
+  - Radio journalism in journalistic studies: mostly hints for pronunciation and training for reading texts, barely some theory
+  - Multi-media journalism is expected to become more prevalent in the future, but this has not yet been part of her programme
+  - Also very interesting for barrier-free web pages (visually impaired)
+
+Approach for rewriting:
+  - First have it read aloud
+    - Do I know at the end of the sentence still what was at its start?
+    - Is the sentence construction simple?
+    - Is the number of foreign words kept small?
+    - Are important aspects repeated?
+    - Is the same word repeatedly used for the same thing?
+  - What is the target audience?
+
+Interface problems:
+  - The language selection option is unclear: does it do spell checking? (no, it just changes the pronunciation; the browser spell check is not influenced by the selection)
+  - The language selection drop-down menu should use the same style (background color) as in the text
+  - The reading did not work the first time due to hidden "&nbsp;" entities - these need to be ignored or removed automatically
+  - There is no option to stop the reading
+  - Another way to specify what to read aloud would be desirable: something that does not go away by clicking somewhere else, so that she can work on the text and have the same part read aloud easily without the need to always highlight it anew
+  - No way to specify the target audience (e.g., technically savvy audience)
+  - The time between speaker changes needs to be increased to sound more natural
+  - Two levels of emphasis are not needed. A stronger change than the one for italics would be good, but the additional pause of bold sounds strange
+  - Italics could be used instead for quotations: change the pitch a bit?
+  - Setting the phonemes would be much more accessible if the dialog box already contained the current phonemes
+  - It is necessary that one can upload their own audio files from disk
+  - For longer texts it would be useful if one could mix speech and background audio
+
+Positive feedback:
+  - The voice is clear and the reading is fluent
+  - Changing the font with the speaker is helpful
+  - The break after a headline works really well (and is what she expected for a headline)
+  - Inserting audio pieces is very helpful, especially for longer texts that need some variation to stay interesting or for introducing the article
+
+
