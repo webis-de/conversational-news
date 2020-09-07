@@ -1,0 +1,49 @@
+{
+  "interactionModel" : {
+    "languageModel" : {
+      "invocationName" : "read aloud",
+      "intents" : [ {
+        "name" : "AMAZON.HelpIntent",
+        "slots" : [ ],
+        "samples" : [ ]
+      }, {
+        "name" : "AMAZON.CancelIntent",
+        "slots" : [ ],
+        "samples" : [ ]
+      }, {
+        "name" : "read",
+        "slots" : [ ],
+        "samples" : [ "Read my document", "Read my text", "Read my paragraph", "Read my ", "Read this document", "Read this text", "Read this paragraph", "Read this ", "Read  document", "Read  text", "Read  paragraph", "Read  " ]
+      }, {
+        "name" : "AMAZON.StopIntent",
+        "slots" : [ ],
+        "samples" : [ ]
+      } ],
+      "types" : [ ]
+    },
+    "dialog" : {
+      "intents" : [ {
+        "name" : "AMAZON.HelpIntent",
+        "confirmationRequired" : false,
+        "prompts" : { },
+        "slots" : [ ]
+      }, {
+        "name" : "AMAZON.CancelIntent",
+        "confirmationRequired" : false,
+        "prompts" : { },
+        "slots" : [ ]
+      }, {
+        "name" : "read",
+        "confirmationRequired" : false,
+        "prompts" : { },
+        "slots" : [ ]
+      }, {
+        "name" : "AMAZON.StopIntent",
+        "confirmationRequired" : false,
+        "prompts" : { },
+        "slots" : [ ]
+      } ]
+    },
+    "prompts" : [ ]
+  }
+}

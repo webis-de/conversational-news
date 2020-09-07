@@ -1,0 +1,37 @@
+.ql-editor {
+  height: 60vh;
+}
+
+.ql-picker.ql-lang .ql-picker-label::before,
+.ql-picker.ql-lang .ql-picker-item::before {
+  content: "English (US)";
+  width: 8em;
+}
+.ql-picker.ql-lang .ql-picker-label[data-value=de-DE]::before,
+.ql-picker.ql-lang .ql-picker-item[data-value=de-DE]::before {
+  content: "Deutsch (DE)";
+}
+.ql-picker.ql-lang .ql-picker-label[data-value=fr-FR]::before,
+.ql-picker.ql-lang .ql-picker-item[data-value=fr-FR]::before {
+  content: "French (FR)";
+}
+
+
+
+.ql-picker.ql-voice .ql-picker-label::before,
+.ql-picker.ql-voice .ql-picker-item::before {
+  content: "Female";
+  width: 5em;
+}
+.ql-picker.ql-voice .ql-picker-label[data-value=male]::before,
+.ql-picker.ql-voice .ql-picker-item[data-value=male]::before {
+  content: "Male";
+  font-family: "monospace";
+}
+voice[name=male] {
+  font-family: "monospace";
+}
+
+phoneme, lang {
+  background-color: lightblue;
+}
