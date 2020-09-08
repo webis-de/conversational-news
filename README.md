@@ -23,3 +23,8 @@ Then go to [http://localhost:8888/index.html](http://localhost:8888/index.html),
 ## Editor Demo
 
 The example service (see above) also runs the editor demo. It uses new WebRTC features that are so far available in Google Chrome only. Go to [http://localhost:8888/editor-demo.html](http://localhost:8888/editor-demo.html). This demo is also available [here](https://demo.webis.de/conversational-news/editor-demo.html).
+
+
+## More
+
+We are currently still in the progress of uploading here and simultaneously deploying the achievements of the project.
